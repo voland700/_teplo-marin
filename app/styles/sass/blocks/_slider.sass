@@ -19,6 +19,9 @@
     box-sizing: border-box
     position: relative
     margin-bottom: 5px
+    &:nth-child(n+9)
+        display: none
+
 .left_menu_link
     display: flex
     align-items: center
@@ -40,6 +43,7 @@
     width: 100%
     object-fit: cover
 .left_menu_title
+    line-height: 1.2
     
 .left_menu_btn_block
     height: 50px
@@ -66,7 +70,8 @@
 
 
 .slider
-    background: rgba($opposite_3, 10%)
+    width: 100%
+    user-select: none
 
 
 .slider_wrapper
@@ -123,9 +128,11 @@
     .accent
         font-weight: 600
         text-shadow: 1px 1px 1px rgba(221, 237, 245, 0.8)
-        //color: $accent
-        //color: $opposite
-        //text-shadow: 1px 1px 1px rgba(43,56,62,.7)
+    .color
+        //color: $accent_shady
+        color: $accent_dark
+
+   
 
 .slide-info.dark
     .slide-info-title,
@@ -135,8 +142,6 @@
     .accent
        color: $accent
        text-shadow: 1px 1px 1px rgba(43,56,62,.7) 
-
-
 
 .slide-info-btn
     align-self: flex-start
@@ -149,26 +154,161 @@
     text-decoration: none
     color: $textcolor
     font-weight: 600
-
     margin-top: auto
-
-
-
-
-    //background: $opposite_2
+    transition: background-color .2s ease-out
+    &:hover
+        background-color: darken($accent, 5% )
+   
 .slide-img-wrap
+    flex-shrink: 0
     display: flex
     justify-content: center
     align-items: center
-    padding: 2rem 2rem 2rem 0
-
-
-
-    //background: $opposite_3
+    padding: 2rem 2rem 2rem 0   
 
 .slide-img
     max-width: 100%
+
+.swiper-btn-next,
+.swiper-btn-prev
+    display: block
+    width: 45px
+    height: 45px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 10
+    font-size: 45px
+    line-height: 45px
+    font-weight: 400
+    text-align: center
+    opacity: 0
+    animation-duration: .5s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+    color: #fff
+    transition: opacity .2s ease-out
+    &:hover
+        opacity: .9
+
+.swiper-btn-prev
+    left: -50px
+    //left: 10px   
+.swiper-btn-next
+    right: -50px
+    //right: 10px
+
+
+@keyframes btnLeft
+    from
+        opacity: 0
+        left: -50px 
+    to
+        opacity: .5
+        left: 10px
     
+@keyframes btnRight
+    from
+        opacity: 0
+        right: -50px 
+    to
+        opacity: .5
+        right: 10px
+
+.slider    
+    &:hover
+        .swiper-btn-prev            
+            animation-name: btnLeft 
+            &:hover
+                opacity: .9    
+        .swiper-btn-next            
+            animation-name: btnRight
+            &:hover
+                opacity: .9
 
 
 
+@media (max-width: 1200px) 
+    .slide-info-title
+        font-size: 1.8rem
+    .slide-info-txt
+        font-size: 1.1rem
+    .slide-info
+        padding-left: 2rem
+
+@media (max-width: 992px)
+    .slider_top
+        grid-template-rows: 636px
+    .slider_top
+        grid-template-columns: 100%
+        grid-template-rows: 50px 570px
+        gap: 1rem
+
+    .left_menu
+        display: block     
+
+
+    .left_menu_list
+        display: block 
+        white-space: nowrap
+        overflow-x: scroll
+        padding: 10px 0
+        scrollbar-width: thin
+        scrollbar-color: $accent $bg_light
+        
+    .left_menu_item
+        display: inline-block 
+        min-height: 30px    
+        height: 100%
+        margin-right: 3px
+        margin-bottom: 0
+        &:nth-child(n+9)
+            display: inline-block
+
+    .left_menu_link
+        display: block
+        position: relative
+        padding: 3px 10px
+        border: none
+        background-color: $bg_light 
+        
+    .left_menu_img_wrap
+        display: none    
+    .left_menu_btn_block
+        display: none
+
+@media (max-width: 768px)
+    .slide-content
+        grid-template-columns: 100%
+        grid-template-rows: 250px 320px
+    .slide-img-wrap
+        order: 1
+        width: 250px
+        height: 250px
+        padding: 1.5rem 0 0 0
+        margin: auto
+
+    .slide-info
+        order: 2
+        text-align: center
+        padding: 1rem 1.5rem 1.5rem 1.5rem
+        ul
+            padding-left: 0
+        li
+            list-style: none
+    .slide-info        
+        background: linear-gradient(1deg,rgba(255, 255, 255, 0.3) 0%, transparent 70%)
+    .slide-info.dark
+        background: linear-gradient(1deg,rgba(0, 0, 0, 0.3) 0%, transparent 70%)        
+
+
+    .slide-info-title
+        font-size: 1.7rem        
+        margin-bottom: 1rem
+        line-height: 1.3
+    .slide-info-btn
+        margin: auto
+
+@media (max-width: 450px)
+    .slide-info-title
+        font-size: 1.5rem

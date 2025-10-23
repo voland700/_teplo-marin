@@ -68,19 +68,16 @@ let slideToggle = (target, duration = 500) => {
 	}
 }
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
 	const btnMobailBar = document.getElementById('btnMobailBar');
 	btnMobailBar.addEventListener('click', (e)=>{
-		e.preventDefault
+		e.preventDefault();		
 		const mobailBar = document.getElementById('mobailBar');
 		mobailBar.classList.toggle('show')
 	})
 
-		//закрыть
+	//закрыть
 	const btnMobailClose = document.getElementById('btnMobailClose');
 		btnMobailClose.addEventListener('click', (e)=>{
 		e.preventDefault()
@@ -97,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const searchMobail = document.getElementById('searchMobail');
 		searchMobail.classList.toggle('show')
 	});
-	//mobail menu up and down
+	// mobail menu up and down
 	document.querySelectorAll('.mobail_btn_menu_chaild').forEach((e) => {
 		e.addEventListener('click', (elem)=>{
 			elem.preventDefault();
@@ -114,12 +111,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		});
 	})
-
-
-
-
-
-
-
-
+	// slider - swiper.js
+	const swiper = new Swiper('.swiper', {
+		enabled:  true,//false - отключает смену слайдов, показывается 1 доступный, удалить или смнить на true
+		speed: 1000,
+		loop: true,
+		parallax: true,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: document.getElementById('slider').dataset.delay ? document.getElementById('slider').dataset.delay : 5000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		navigation: {
+			nextEl: '.swiper-btn-next',
+			prevEl: '.swiper-btn-prev',
+		},
+	});
 })

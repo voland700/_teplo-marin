@@ -44,5 +44,8 @@
     "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.98.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^12.0.3"
   }
 }
