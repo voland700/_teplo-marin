@@ -1,0 +1,85 @@
+// USER VARIABLES SECTION
+
+$accent: #ffda33 // Accent Color
+
+
+
+
+$fontsize: 16px // Body Font Size
+$textcolor: #555 // Text Color
+$text-gray:#8b8b8b
+$text-light: #999999
+
+$bg_light: #f7f7f7
+
+$opposite: #4E34B0
+$opposite_2: #3059AA
+$opposite_3: #792AAB
+
+
+
+	
+$border: inset 0 0 0 1px #ededed
+
+
+
+
+$lineheight: 1.5 // Document Line Height
+$userfont: rt-roboto-ui, roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('rt-roboto-ui', normal, 300, '../fonts/PT-Root-UI_Light.woff2')
+@include font('rt-roboto-ui', normal, 400, '../fonts/PT-Root-UI_Regular.woff2')
+@include font('rt-roboto-ui', normal, 500, '../fonts/PT-Root-UI_Medium.woff2')
+@include font('rt-roboto-ui', normal, 700, '../fonts/PT-Root-UI_Bold.woff2')
+
+
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

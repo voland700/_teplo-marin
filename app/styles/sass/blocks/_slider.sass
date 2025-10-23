@@ -1,0 +1,174 @@
+
+.slider_top
+    display: grid
+    grid-template-columns: 3fr 9fr
+    grid-template-rows: 500px
+    gap: 2rem
+.left_menu
+    display: flex
+    flex-direction: column
+    background: transparent
+
+.left_menu_list
+    padding-left: 0
+    margin-bottom: 0
+    overflow: hidden
+.left_menu_item
+    list-style: none
+    min-height: 50px
+    box-sizing: border-box
+    position: relative
+    margin-bottom: 5px
+.left_menu_link
+    display: flex
+    align-items: center
+    position: absolute
+    inset: 0
+    text-decoration: none
+    color: $textcolor
+    transition: color .2s ease-out
+    &:hover
+        color: $text-gray
+.left_menu_img_wrap
+    display: block
+    width: 48px
+    height: 48px
+    margin-right: 1rem
+    //padding: 1px
+
+.left_menu_img
+    width: 100%
+    object-fit: cover
+.left_menu_title
+    
+.left_menu_btn_block
+    height: 50px
+    box-sizing: border-box
+    position: relative
+    margin-top: auto
+
+
+.left_menu_btn_icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    margin-right: 1rem
+    box-sizing: border-box
+    background-color: $accent
+    border-radius: 5px
+    z-index: 1
+    svg
+        width: 20px
+        height: auto
+
+
+
+.slider
+    background: rgba($opposite_3, 10%)
+
+
+.slider_wrapper
+
+
+    height: 100%
+.slide
+    position: relative
+    height: 100%
+    background: #fff
+
+.slider_background
+    position: absolute
+    inset: 0
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    z-index: 0    
+
+.slider_overlay
+    position: absolute
+    inset: 0        
+    z-index: 1
+
+.slide-content
+    display: grid
+    grid-template-columns: 5fr 4fr
+    grid-template-rows: 1
+    //gap: 2rem
+    position: absolute
+    inset: 0
+    z-index: 5
+
+    //padding: 2rem
+
+.slide-info
+    display: flex
+    flex-direction: column     
+    padding: 4rem 0 4rem 4rem
+    color: #333
+    
+.slide-info-title
+    font-size: 2.1rem
+    font-weight: 600
+    margin-bottom: 2rem
+    text-shadow: 1px 1px 1px rgba(221, 237, 245, 0.8)
+    //text-shadow: 1px 1px 1px rgba(43,56,62,.7)
+
+
+.slide-info-txt
+    font-size: 1.2rem
+    text-shadow: 1px 1px 1px rgba(221, 237, 245, 0.8)
+   
+    .accent
+        font-weight: 600
+        text-shadow: 1px 1px 1px rgba(221, 237, 245, 0.8)
+        //color: $accent
+        //color: $opposite
+        //text-shadow: 1px 1px 1px rgba(43,56,62,.7)
+
+.slide-info.dark
+    .slide-info-title,
+    .slide-info-txt
+        color: $bg_light
+        text-shadow: 1px 1px 1px rgba(43,56,62,.7)
+    .accent
+       color: $accent
+       text-shadow: 1px 1px 1px rgba(43,56,62,.7) 
+
+
+
+.slide-info-btn
+    align-self: flex-start
+    display: block
+    box-sizing: border-box
+    border: 2px solid $accent
+    border-radius: 5px
+    background-color: $accent
+    padding: 8px 20px
+    text-decoration: none
+    color: $textcolor
+    font-weight: 600
+
+    margin-top: auto
+
+
+
+
+    //background: $opposite_2
+.slide-img-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 2rem 2rem 2rem 0
+
+
+
+    //background: $opposite_3
+
+.slide-img
+    max-width: 100%
+    
+
+
+

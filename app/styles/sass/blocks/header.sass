@@ -1,0 +1,364 @@
+header
+    padding-top: 1.5rem
+    padding-bottom: 1rem
+    border-bottom: 5px solid #f7f7f7
+    box-shadow: 0 6px 8px -8px #ededed  
+
+.top    
+    display: flex
+    align-items: center
+    margin-bottom: 1rem
+
+.top_logo
+    display: block
+    height: 40px
+    width: 150px
+.top_logo_link
+    display: block
+    font-weight: 700
+    font-size: 1.75rem
+    line-height: 40px
+    color: #333
+    text-decoration: none
+    transition: color 70ms ease-out
+    &:hover
+        color: $accent
+
+.btn_catalog
+    flex-shrink: 0
+    margin: 0 2rem
+    margin: 0 1.5rem 0 2rem
+    display: block
+    height: 40px
+    line-height: 38px
+    padding: 0 1rem
+    text-decoration: none
+    font-weight: 500
+    color: $textcolor
+    background: $accent
+    border: none
+    border-radius: 2px
+    box-sizing: border-box
+    transition: background 70ms ease-out
+    &:hover
+        background: darken($accent, 5%)
+    .moonicon
+        display: inline-block
+        width: 15px
+        height: 15px        
+        margin-right: .5rem
+        svg
+            width: 100%
+
+.search
+    display: flex
+    flex-grow: 1
+    margin: 0 2rem
+    //width: 100%
+.search_input 
+    flex-grow: 1   
+    display: block
+    height: 40px
+    box-sizing: border-box
+    border: 2px solid $accent
+    padding-left: 1rem
+    color: #555
+.search_btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 40px
+    border: none
+    border-radius: 0 2px 2px 0
+    background-color: $accent 
+    font-size: 1.2rem  
+    line-height: 40px
+    margin-right: 15px
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+    transition: background-color .2s ease-out
+    &:hover
+        background-color: darken($accent, 5%)
+
+.top_btns_wrapper
+    display: flex
+    //margin-left: auto
+
+.btn_icon
+    flex-shrink: 0
+    margin: 0 1rem
+    display: block
+    height: 40px
+    line-height: 38px
+    padding: 0 1rem
+    text-decoration: none
+    font-weight: 500
+    color: $textcolor
+    background: $bg_light
+    border: none
+    border-radius: 2px
+    box-sizing: border-box
+    transition: background 70ms ease-out
+    &:hover
+        background: darken($bg_light, 2%)
+        &__count
+            background: darken($accent, 5%)
+    &:has(.btn_icon__count)
+        padding-right: 0
+    .moonicon
+        display: inline-block
+        width: 15px
+        height: 15px        
+        margin-right: .5rem
+    &__count
+        display: inline-block
+        height: 40px
+        min-width: 40px
+        margin-left: 1rem
+        background-color: $accent
+        font-weight: 700
+        text-align: center
+        box-sizing: border-box
+        border-radius: 0 2px 2px 0
+        padding: 0 .5rem
+    &:first-child
+        margin-left: 0
+    &:last-child
+        margin-right: 0
+    
+.top_nav_wrapper
+    display: flex
+    justify-content: space-between
+.top_nav
+.nav_list
+    display: flex
+    padding-left: 0
+    margin-bottom: 0
+    font-size: .925rem
+.nav_item
+    list-style: none
+    margin-right: .5rem
+.nave_item_link
+    text-decoration: none
+    color: $textcolor
+    padding: 0 1rem
+    transition: color .2s ease-out
+    &:first-child
+        padding-left: 0
+    &:hover
+        color: #777
+
+.top_nav_phone
+    text-decoration: none
+    color: $textcolor
+    font-size: .95rem
+
+.mobail_bar
+    //display: block
+    visibility: hidden
+    position: fixed
+    top: 0
+    left: 0
+    overflow-y: auto
+    height: 100%
+    width: 100%
+    z-index: 100
+    box-shadow: 5px 0 10px  #ededed
+    transition: all .4s ease-in-out
+    transform: translateX(-100%)
+    //transform: translateX(-55%)
+
+    
+
+    background: #fff
+    touch-action: auto
+
+.mobail_bar.show
+    //display: block
+    visibility: visible
+    transition: all .4s ease-in-out
+    transform: translateX(0)
+
+
+.mobail_bar_top
+    display: flex
+    height: 60px
+    align-items: center
+    position: relative
+    background-color:  #ededed
+.mobail_btn_close
+    position: absolute 
+    top: 18px
+    right: 35px   
+    border: none
+    background: transparent
+    span
+        opacity: .7
+    &:hover
+        span
+            opacity: 1
+
+.mobail_bar_search
+    display: flex
+    justify-content: space-between
+    position: relative
+    height: 60px
+    align-items: center
+    position: relative
+    padding: 0 30px
+    background: $bg_light
+
+.search_mobail
+    display: none
+    position: absolute
+    width: calc( 100% - 40px )
+    opacity: 0
+    transition: opacity .2s ease-out	
+
+.search_mobail.show
+    display: flex
+    opacity: 1
+
+.btn_mobail_icon   
+    display: none
+    border: none
+    font-size: 1.375rem
+    background: transparent
+    text-decoration: none
+    color: $textcolor
+.mobail_menu
+    padding-left: 10px
+    padding-right: 10px
+.mobail_bar_title_wrap
+    height: 50px
+    padding:  15px 10px
+    border-bottom: 1px solid $bg_light
+    
+
+.mobail_bar_h1
+    font-size: 1.1rem
+    font-weight: 500
+    
+.mobail_nenu_list
+    padding-left: 10px    
+.mobale_menu_item
+    list-style: none
+    min-height: 50px
+    position: relative
+    border-bottom: 1px solid $bg_light
+.mobale_menu_link
+    display: flex
+    align-items: center
+    min-height: 50px
+    text-decoration: none
+    color: $textcolor
+    transition: color .2s ease-out
+    &:hover
+        color: $opposite
+
+.mobail_btn_menu_chaild
+    display: block
+    width: 30px
+    height: 30px
+    position: absolute
+    top: 10px
+    right: 20px
+    border: none  
+    background: transparent
+    font-size: .9rem
+
+.mobail_menu_list_child
+    display: none
+    text-decoration: none
+    color: $textcolor  
+    padding-left: 20px 
+    margin-bottom: .75rem 
+
+.mobail_nav_list
+    padding-left: 40px
+    padding-bottom: 1rem
+    border-bottom: 1px solid $bg_light   
+.mobail_nav_item
+    //list-style: none
+    margin-bottom: 5px
+.mobail_nav_link
+    text-decoration: none
+    color: $textcolor
+    font-size: .95rem
+    font-weight: 600
+    margin-bottom: 10px
+.mobail_menu_phone
+    display: block
+    font-size: 1.5rem
+    font-weight: 700
+    color: $textcolor
+    text-align: center
+    text-decoration: none
+    margin-bottom: 2rem
+    
+
+
+.mobale_menu_item.chaild
+    min-height: auto
+    border: none
+    .mobale_menu_link
+        min-height: auto
+        font-size: .9rem
+        padding: 2px 0
+
+@media (max-width: 1200px)
+    .btn_icon
+        margin-left: .5rem
+        margin-right: .5rem
+    .btn_icon .moonicon
+        margin-right: 0
+    .btn_icon__text
+        display: none
+
+@media (max-width: 992px)
+    .top_logo
+        width: 130px
+
+    .top_logo_link
+        font-size: 1.5rem
+
+    .btn_catalog
+        margin-left: 1rem
+        margin-right: 1rem
+
+    .search
+        margin: 0
+
+@media (max-width: 768px)
+    header
+        padding-bottom: 1.5rem
+    .top
+        justify-content: space-between
+        margin-bottom: 0
+
+    .btn_catalog
+        display: none
+    .top_logo
+        width: auto
+    .top_logo_link
+        font-size: 1.75rem    
+    .search
+        display: none
+    .top_btns_wrapper
+        display: none  
+
+    .top_nav_wrapper
+        display: none
+
+    .btn_mobail_icon   
+        display: block
+
+
+    
+    
+
+
+
+
