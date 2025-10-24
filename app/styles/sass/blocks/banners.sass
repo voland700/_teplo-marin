@@ -1,0 +1,96 @@
+.banners_wrap
+    display: grid
+    grid-template-columns: 1fr 1fr  1fr 1fr 1fr
+    grid-template-rows: 200px 200px    
+    gap: 20px
+    box-sizing: border-box
+    border: none
+    border-radius: 4px
+    overflow: hidden
+    grid-template-areas:  "banner_1 banner_2 banner_2 banner_3 banner_4" "banner_5 banner_2 banner_2 banner_6 banner_7"
+
+.banner_1
+    grid-area: banner_1
+
+.banner_2
+    grid-area: banner_2    
+
+.banner_3
+    grid-area: banner_3
+    
+.banner_4
+    grid-area: banner_4 
+.banner_5
+    grid-area: banner_5 
+
+.banner_6
+    grid-area: banner_6 
+.banner_7
+    grid-area: banner_7 
+
+.banner_item
+    position: relative
+    
+.banner_link
+    display: block
+    position: absolute
+    inset: 0
+    text-decoration: none
+    color: $textcolor
+    overflow: hidden
+
+.banner_img
+    object-fit: cover
+    max-width: 100%
+    max-height: 100%
+
+
+@media (max-width: 1400px) 
+    .banners_wrap 
+        grid-template-rows: 161px 161px
+    .banner_img
+        width: 206px
+        height: 161px
+    .banner_img.big
+        width: 432px
+        height: 342px
+
+@media (max-width: 1200px) 
+    .banners_wrap 
+        grid-template-rows: 140px 140px
+    .banner_img
+        width: 170px
+        height: 140px
+    .banner_img.big
+        width: 360px
+        height: 300px
+
+@media (max-width: 992px)
+    .banners_wrap
+        grid-template-columns: 1fr 1fr  1fr 1fr
+        grid-template-rows: 130px 130px
+        grid-template-areas: "banner_3 banner_4 banner_2 banner_2" "banner_5 banner_6 banner_2 banner_2"
+
+    .banner_item.banner_1,
+    .banner_item.banner_7
+        display: none
+    .banner_img
+        width: 157px
+        height: 130px
+    .banner_img.big
+        width: 335px
+        height: 280px
+
+@media (max-width: 768px)
+    .banners_overflow
+        overflow-x: scroll
+        scrollbar-width: thin
+        scrollbar-color: $accent $bg_light
+    .banners_wrap
+        width: 868px
+        grid-template-columns: 1fr 1fr  1fr 1fr 1fr
+        grid-template-areas: "banner_3 banner_4 banner_2 banner_2 banner_1" "banner_5 banner_6 banner_2 banner_2 banner_7"
+        margin-bottom: .75rem
+    .banner_item.banner_1,
+    .banner_item.banner_7
+        display: block
