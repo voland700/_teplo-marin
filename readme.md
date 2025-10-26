@@ -1,4 +1,4 @@
-##Frontend, template internet site, shop teplo-marine
+## Frontend, template internet site, shop teplo-marine
 
-*gulp 
-*npm run dev
+* gulp 
+* npm run dev
