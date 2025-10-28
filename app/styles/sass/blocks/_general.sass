@@ -2,3 +2,80 @@ main
     padding-top: 2rem
 
 
+
+
+@keyframes shining
+    from
+        left: -45%
+        opacity: .0
+    90%
+        left: 80%
+        opacity: .6
+    95%
+        left: 90%
+        opacity: .3
+    to
+        left: 100%
+        opacity: 0
+
+.shining
+    position: relative
+    overflow: hidden
+    transition: .2s
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: -50%
+        z-index: 2
+        display: block
+        width: 25%
+        height: 100%
+        opacity: 0
+        overflow: hidden
+        background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%)
+        transform: skewX(-25deg)
+
+@keyframes shine
+    from
+        left: -45%
+        opacity: 1
+    to
+        left: 100%
+        opacity: 1
+
+.shine
+    //position: relative
+    overflow: hidden
+    transition: .2s
+    &::before
+        position: absolute
+        top: 0
+        left: -45%
+        z-index: 2
+        display: block
+        content: ''
+        width: 25%
+        height: 100%
+        opacity: 0
+        background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.2) 100%)
+        transform: skewX(-25deg)
+        transition: .2s
+
+    &:focus,
+    &:hover
+        &::before
+            animation-duration: .4s
+            animation-fill-mode: both
+            animation-name: shine
+
+.increase
+    overflow: hidden
+    img
+        transition: all .3s ease-out
+    &:focus,
+    &:hover
+    img
+        transform: scale(1.05)
+
+

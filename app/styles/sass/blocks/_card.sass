@@ -24,19 +24,16 @@
 	background-color: #fff
 
 	&:hover
-		box-shadow: inset 0 0 0 2px $accent
-		.card_btn
-			background-color: $accent
+		//box-shadow: inset 0 0 0 2px $accent
+		box-shadow: inset 0 0 0 2px $border-color
+		//box-shadow: inset 0 0 0 2px rgba($ok, 10% )
 		
-
-	
-			
-
-
-
-
-
-
+		.card_btn
+			//background-color: $accent
+			//background-color: $ok
+			background-color: darken($ok_l, 3%)
+			 
+			//color: #444
 
 .card_img_wrap
 	position: relative
@@ -54,17 +51,95 @@
 .card_img
 	max-width: 100%
 	max-height: 100%
+
+.card_discount
+	display: inline-block
+	position: absolute
+	right: 0
+	bottom: 0
+	z-index: 10	
+	//background-color: $accent_mix
+	//background-color: #FF33DF
+	background-color: #fbb900
+	font-size: .95rem
+	line-height: 1rem
+	font-weight: 600
+	letter-spacing: 1px
+	color: #fff
+	text-align: center
+	text-shadow: 1px 1px 1px rgba(#82630b, .7)
+	padding: 4px 7px
+	box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2)
+	box-sizing: border-box
+	border: none
+	border-radius: 3px
+	overflow: hidden
+
+
+
+.card_advantages
+	position: absolute
+	top: -3px
+	left: 0
+	width: 70%
+	height: auto
+	box-sizing: border-box
+	z-index: 1
+	display: flex
+	flex-wrap: wrap
+
+.card_advantage
+	display: inline-block
+	margin: 0 3px 3px 0
+	letter-spacing: .4px
+	color: #fff
+	font-size: .72em
+	line-height: 80%
+	padding: 5px 10px
+	text-transform: uppercase
+	border-radius: 2px
+	box-sizing: border-box
+	text-shadow: 1px 1px 0 rgba(#000, .1)
+	box-shadow: 0 1px 1px rgba(#000, .1)
+	z-index: 5
+
+.card_advantage.hit
+	//background-color: $hit
+	background-color: #19AFD1
+
+.card_advantage.new
+	//background-color: $new
+	background-color: #1975D1
+
+.card_advantage.action
+	background-color: #19D1B7
+	//background-color: #32C295
+	//background-color: $accent_mix
+	//background-color: $action
+
+.card_advantage.tip
+	//background-color: $tip
+	background-color: #193BD1
+
+
 .card_title
 	font-size: 1rem
-	line-height: 1.125rem
+	line-height: 1.25rem
 	word-break: break-word
 	margin-bottom: .5rem
 .card_title_link
 	//color: $text-gray
-	//color: $textcolor
-	color: #222
-	font-weight: 300
+	color: $textcolor
+	//color: #222
+	font-weight: 400
 	text-decoration: none
+	transition: color .2s ease-out
+	&:hover
+		//color: $hover
+		color: #333
+
+
+
 .card_price_block
 	flex-grow: 1
 	display: flex
@@ -110,16 +185,17 @@
 	//background-color: $accent
 	//background-color: transparent
 	//background-color: #DFC862
-	//background-color: #E6DBAC
-	background-color: darken($bg_light, 2%)
+	background-color: $ok_l
+	//background-color: darken($bg_light, 2%)
 	font-size: .85rem
 	line-height: .85rem
 	font-weight: 600
-	color: #444	
+	//color: #444
+	color: #fff	
 	transition: color .2s ease-out, background-color .2s ease-out
 	&:hover			
-			color: $textcolor
-			background-color:$accent
+		color: $textcolor
+		background-color:$accent
 
 .card_counter_wrap
 	width: 48%
