@@ -5,22 +5,20 @@ footer
 .footer_logo
     display: block
     padding-top: 3rem
-    //padding-bottom: 1rem
-    //color: #fff
+    
     
 
 .footer_logo_link
     display: inline-block
-    font-size: 2rem
+    font-size: 1.8rem
     line-height: 2.1rem
     font-weight: 700
     text-decoration: none
     color: #f0f0f0
-    //color: $accent
-    //background: linear-gradient(to right, #FFDA33 0%, #4E34B0 100%)
-    //-webkit-background-clip: text
-    //-webkit-text-fill-color: transparent
-    //color: mixmix(#fff, #4E34B0, 10%)
+    transition: opacity .3s
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .1)
+    &:hover
+        color: rgba(#fff, .7)
 
 .footer_wrap
     display: grid
@@ -61,6 +59,7 @@ footer
     font-weight: 600
     text-decoration: none
     color: #fff
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .1)
     padding: 0 .75rem    
     border-left: 2px solid #fff
     transition: color .2s ease-out
