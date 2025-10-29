@@ -1,0 +1,168 @@
+footer
+    background-color: #333
+    color: #fff
+
+.footer_logo
+    display: block
+    padding-top: 3rem
+    //padding-bottom: 1rem
+    //color: #fff
+    
+
+.footer_logo_link
+    display: inline-block
+    font-size: 2rem
+    line-height: 2.1rem
+    font-weight: 700
+    text-decoration: none
+    color: #f0f0f0
+    //color: $accent
+    //background: linear-gradient(to right, #FFDA33 0%, #4E34B0 100%)
+    //-webkit-background-clip: text
+    //-webkit-text-fill-color: transparent
+    //color: mixmix(#fff, #4E34B0, 10%)
+
+.footer_wrap
+    display: grid
+    grid-template-columns: 3fr 3fr 3fr 4fr
+    grid-template-rows: auto
+    gap: 2rem
+    padding: 2rem 0
+    border-bottom: 1px solid rgba(#fff, .5)
+.footer_block
+.futer_title
+    font-size: 1.4rem
+    font-weight: 600
+    margin-bottom: .75rem
+.footer_menu_ul
+    padding-left: 0
+    margin-bottom: 0
+
+.footer_menu_li
+    list-style: none
+    margin-bottom: .35rem
+.footer_menu_a
+    color: #fff
+    text-decoration: none
+    font-size: .95rem
+    transition: color .2s ease-out
+    &:hover
+        color: rgba(#fff, .7)
+        
+.footer_info_block
+    display: flex
+    flex-direction: column    
+.footer_phone 
+    margin-bottom: .5rem 
+
+.footer_phone_link
+    display: inline-block
+    font-size: 1.1rem
+    font-weight: 600
+    text-decoration: none
+    color: #fff
+    padding: 0 .75rem    
+    border-left: 2px solid #fff
+    transition: color .2s ease-out
+    &:first-child
+        padding-left: 0
+        border-left: none    
+    &:hover
+        color: rgba(#fff, .7)
+
+
+
+
+.footer_address
+.footer_media
+    margin: auto 0
+.footer_media_ul
+    padding-left: 0
+    margin-bottom: 0
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+.footer_media_icon
+    list-style: none
+    display: block
+    position: relative
+    width: 24px
+    height: 24px
+    overflow: hidden
+    border-radius: 100%
+    font-size: 0
+    margin: 0 10px 10px 0
+    background: 0 0
+    background-image: url(/images/src/icons/icons.png)
+    background-repeat: no-repeat
+    cursor: pointer
+    opacity: .3
+    transition: opacity .3s
+    &:hover
+        opacity: .8
+
+.footer_media_icon.dzen
+    background-position: 0 0
+.footer_media_icon.rutube
+    background-position: -24px 0
+.footer_media_icon.telegram
+    background-position: -48px 0
+.footer_media_icon.vk
+    background-position: -72px 0
+.footer_media_icon.youtube
+    background-position: -96px 0
+.footer_bottom
+    padding: 1.5rem 0
+    color: rgba(#fff, .5 )
+
+@media (max-width: 1400px) 
+    .footer_wrap
+        grid-template-columns: 1fr 1fr 1fr 2fr
+
+@media (max-width: 1200px) 
+    .footer_wrap
+        grid-template-columns: 1fr 1fr 1fr 1fr
+    .footer_phone_link
+        padding-left: 0
+        border-left: none
+
+@media (max-width: 1200px) 
+    .footer_wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    .footer_block
+        width: 200px
+
+    .footer_info_block
+        width: 100%
+
+    .footer_phone_link
+        padding: 0 .75rem    
+        border-left: 2px solid #fff
+        &:first-child
+            padding-left: 0
+            border-left: none    
+
+@media (max-width: 992px) 
+    .footer_info_block
+        justify-content: center
+        align-items: center
+    .footer_media
+        margin-top: 2rem
+
+@media (max-width: 768px)
+    .footer_logo
+        display: flex
+        justify-content: center
+        margin-bottom: 2rem
+    .footer_wrap
+        justify-content: space-around
+    .footer_block
+        width: 40%
+        text-align: center
+
+@media (max-width: 490px)
+    .footer_block
+        width: 90%

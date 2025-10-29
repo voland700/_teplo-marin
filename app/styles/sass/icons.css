@@ -24,7 +24,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-dzen:before {
+  content: "\e91e";
+}
+.icon-rutube:before {
+  content: "\e91f";
+}
+.icon-telegram:before {
+  content: "\e920";
+}
+.icon-vk:before {
+  content: "\e921";
+}
+.icon-youtube:before {
+  content: "\e922";
+}
 .icon-bars-sort-thin:before {
   content: "\e900";
 }
