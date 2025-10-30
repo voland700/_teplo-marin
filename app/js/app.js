@@ -1,6 +1,3 @@
-// // Import vendor jQuery plugin example
-// import '~/app/libs/mmenu/dist/mmenu.js'
-
 let slideUp = (target, duration=500) => {
 
 	target.style.transitionProperty = 'height, margin, padding';
@@ -112,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	})
 	// slider - swiper.js
-	const swiper = new Swiper('.swiper', {
+	const MainSlider = new Swiper('#slider', {
 		enabled:  true,//false - отключает смену слайдов, показывается 1 доступный, удалить или смнить на true
 		speed: 1000,
 		loop: true,
@@ -122,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			crossFade: true
 		},
 		autoplay: {
-			delay: document.getElementById('slider').dataset.delay ? document.getElementById('slider').dataset.delay : 5000,
+			delay: document.getElementById('sliderWruper').dataset.delay ? document.getElementById('sliderWruper').dataset.delay : 5000,
 			disableOnInteraction: false,
 			pauseOnMouseEnter: true,
 		},
@@ -131,4 +128,42 @@ document.addEventListener('DOMContentLoaded', () => {
 			prevEl: '.swiper-btn-prev',
 		},
 	});
-})
+
+
+
+
+	const brands = new Swiper('#brands', {
+		speed: 500,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true,
+			},
+			breakpoints: {
+			320: {
+			slidesPerView: 2,
+			spaceBetween: 0
+			},
+				576: {
+			slidesPerView: 3,
+			spaceBetween: 20
+			},
+				768: {
+			slidesPerView: 4,
+			spaceBetween: 20
+			},    
+			992: {
+			slidesPerView: 5,
+			spaceBetween: 20
+			},   
+			1200: {
+			slidesPerView: 7,
+			spaceBetween: 15
+			}
+		}
+	});
+
+
+
+}) /* -- END --*/
