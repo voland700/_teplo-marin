@@ -1,0 +1,87 @@
+.chapter
+    margin-bottom: 6rem
+    .main_h2
+        display: inline-block
+        padding-right: 1rem
+        //border-right: 1px  solid $textcolor
+
+.chapter_subtitle
+    display: inline-block
+    text-decoration: none
+    color: $textcolor
+    padding-left: 1rem
+    border-left: 1px  solid $textcolor
+    font-size: 1.05rem
+    margin-bottom: 1.5rem
+    transition: color .2s ease-out
+    &:hover
+        color: darken($hover, 10%)
+
+.chapter_wraper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+   
+.chapter_item
+    width: calc( (100% - 10rem) / 6)
+    padding: 1rem
+    &:hover
+        .chapter_title_link
+            //color: $hover
+            color: darken($hover, 10%)
+.chapter_img_wrap
+    position: relative
+    width: 100%
+.chapter_img_link
+    display: flex  
+    margin-bottom: 1rem
+    &::before
+        position: absolute
+        inset: 0
+        padding-top: 100%
+    
+.chapter_img
+    max-width: 120px
+    max-height: 120px
+    margin: auto
+.chapter_title
+    font-size: 1.05rem
+    font-weight: 400
+    margin-bottom: 0
+.chapter_title_link
+    display: block
+    text-decoration: none
+    text-align: center
+    color: $textcolor
+    transition: color .2s ease-out
+
+@media (max-width: 1400px) 
+    .chapter_item
+        width: calc( (100% - 7.5rem) / 6)
+    .chapter_img
+        max-height: 110px
+        max-width: 110px
+       
+@media (max-width: 1200px)
+    .chapter_item
+        width: calc( (100% - 10rem) / 4)
+    .chapter_img
+        max-height: 120px
+        max-width: 120px
+
+@media (max-width: 992px)
+    .chapter_item
+        width: calc( (100% - 6rem) / 3)
+
+@media (max-width: 768px)
+    .chapter_item
+        width: calc( (100% - 4rem) / 2)
+    .chapter_img
+        max-height: 120px
+        max-width: 120px 
+    .chapter_title
+        font-size: 1.0275 
+
+@media (max-width: 450px)
+    .chapter_item
+        width: calc( (100% - 1rem) / 2)
