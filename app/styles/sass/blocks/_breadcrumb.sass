@@ -1,0 +1,37 @@
+.breadcrumb_block
+    padding-top: 1.5rem
+    padding-bottom: 2rem
+.breadcrumb
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    margin-bottom: 0
+
+.breadcrumb-item 
+    list-style: none
+    display: inline-block
+    font-size: 1rem
+    font-weight: 400 
+    line-height: 1.5
+    color: #999
+    margin-bottom: .5rem
+
+    a
+        display: inline-block
+        //color: #999
+        color: #777
+        text-decoration: none
+        transition: color .2s ease-out 
+        &::after
+            content: "-"
+            display: inline-block
+            opacity: .7
+            margin: 0 10px
+        &:hover
+            //color: #333
+            color: darken($hover, 10%)
+        
+.title
+    font-size: 2rem
+    font-weight: 600
+    line-height: 1.2

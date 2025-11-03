@@ -1,0 +1,66 @@
+.advice_block
+    margin-bottom: 6rem
+.advice_ul
+    padding-left: 0
+.advice_li
+    display: inline-block
+    list-style: none
+    padding: 6px 8px
+    font-size: 1rem
+    font-weight: 500
+    color: #999
+    line-height: 1
+    box-sizing: border-box
+    border: none
+    border-radius: 3px
+    background-color: transparent
+    cursor: pointer
+    transition: color .2s ease-out
+    &:hover
+        color: $textcolor
+.advice_li.clicked
+    background-color: $accent 
+    color: $textcolor  
+.advice_wrapper
+    display: none
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: auto
+    //gap: 1rem
+    gap: 0
+    .card
+        margin-top: -1px
+        margin-left: -1px        
+    .card_inner
+        box-shadow: 0 0 0 1px $border-color
+        &:hover
+            box-shadow: 0 0 0 1px $border-color
+
+.advice_wrapper.behold
+    display: grid
+    
+@media (max-width: 1400px) 
+    .card.c9,
+    .card.c10
+        display: none
+    .advice_wrapper
+        grid-template-columns: repeat(4, 1fr)
+
+@media (max-width: 992px) 
+    .card.c9  
+        display: block
+    .advice_wrapper
+        grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 768px) 
+    .advice_wrapper
+        grid-template-columns: repeat(2, 1fr)
+    .card.c10  
+        display: block
+
+@media (max-width: 490px) 
+    .advice_wrapper
+        grid-template-columns: 1fr 
+        gap: 1rem
+        .card
+            position: relative
+            margin: 0 auto

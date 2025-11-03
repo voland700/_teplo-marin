@@ -165,5 +165,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
+    /*--tabs--*/
+	document.querySelectorAll('.advice_li').forEach(function (elem) {
+		elem.addEventListener('click', function (li) {
+			let elemSelected = li.target.parentElement;	
+			let nameAttr = elemSelected.dataset.advice;
+			let nameList = document.querySelectorAll('.advice_li');
+			let tabsList;
+			if (!elemSelected.classList.contains('clicked')) {
+				nameList.forEach(function (name) {
+					if (name.classList.contains('clicked')) name.classList.remove('clicked');
+				});
+				elemSelected.classList.add('clicked');
+				tabsList = document.querySelectorAll('.advice_wrapper');
+				tabsList.forEach(item => {
+					item.dataset.tab == nameAttr ? item.classList.add('behold') : item.classList.remove('behold');
+				})
+			}
+		});
+	});
+
 
 }) /* -- END --*/
