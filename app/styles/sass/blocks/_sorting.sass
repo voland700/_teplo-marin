@@ -1,0 +1,41 @@
+.sorting_block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 32px
+
+.sorting_btn_block
+    display: flex
+    //margin-bottom: 1.5rem
+.sorting_btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 36px
+    height: 32px
+    border: 1px solid $border-color
+    background-color: transparent
+    transition: background-color .2s ease-out   
+    svg
+        display: block
+        width: 16px
+        height: 16px
+        fill: #999
+        transition: fill .2s ease-out
+    
+    &:hover
+        background-color: $accent
+        svg
+            fill: #333
+
+
+
+.sorting_btn.active
+    background-color: $accent
+    svg
+        fill: #333
+
+    
+.sorting_btn.btn_grid
+
+.sorting_btn.btn_list

@@ -1,23 +1,40 @@
 .filter   
     border: 1px solid $border-color
     border-radius: 3px
-.filter_top
+.filter_top  
+    position: relative 
+    padding: 1rem
+    border-bottom: 1px solid $border-color
+
+.filter_top_title
     font-size: 1.5rem
     font-weight: 600
     color: #333
     line-height: 1.2
+.mobail_btn_filter_close
+    display: none
+    position: absolute 
+    top: 20px
+    right: 25px   
+    border: none
+    background: transparent
+    transition: color .2s ease-out
+    span
+        opacity: .7
+    &:hover
+        span
+            opacity: 1
+            color: red
 
-    padding: 1rem
-    border-bottom: 1px solid $border-color
 .filter_item 
     padding: 1rem
     border-bottom: 1px solid $border-color
+
 .filter_item_head
     display: block
-    position: relative
+    position: relative 
     
-    
-
+.filter_item_btn--not,
 .filter_item_btn
     display: block
     width: 100%
@@ -28,12 +45,16 @@
     padding: .5rem 1rem .5rem .5rem
     box-sizing: border-box
     border: none
-    background-color: transparent
-    transition: background-color .2s ease-out
+    background-color: transparent    
+
+.filter_item_btn
+    transition: background-color .2s ease-out  
     cursor: pointer
     &:hover,
     &:focus
         background-color: #f7f7f7
+.filter_item_btn--not
+    cursor: auto
 
 .filter_head_icon
     display: block
@@ -48,13 +69,68 @@
     text-align: center
     font-size: .85rem
 
+.filter_all
+    
+.filter_all_link
+    display: block   
+    font-size: .9rem
+    font-weight: 400
+    line-height: 1.1
+    margin-bottom: .5rem
+    color: #333
+    text-decoration: none
+    flex-grow: 1
+    transition: color .2s ease-out        
+    &:hover
+        color: darken($hover, 10%)
+    .icon-chevron-right-thin
+        font-size: .8rem
+        line-height: .8rem
+        display: inline-block
+        margin-right: .5rem
+.filter_current_category
+    display: block
+    width: 100%
+    color: #333
+    font-size: .9rem
+    font-weight: 600
+    text-align: left
+    margin-bottom: .75rem
+
+.filter_current_category ~ ul
+    padding-left: .375rem  
+
+
 .filter_content
     display: block
     padding: .5rem
 .filter_ul_link
-    padding-left: 0
+    padding: 0
     margin-bottom: 0
+.filter_ul_checkbox
+    padding: 0
+    margin-bottom: 0
+.filter_content.scroll
+    margin-right: -1rem
+
+    .filter_ul_checkbox
+        max-height: 265px
+        overflow-y: auto    
+        scrollbar-width: thin
+        scrollbar-color: darken($border-color, 10%) transparent
+        padding-right: .75rem
+        &::-webkit-scrollbar 
+            height: 12px
+            width: 8px
+        &::-webkit-scrollbar-track
+            background: $border-color
+        &::-webkit-scrollbar-thumb
+            background-color: $border-color
+            border-radius: 3px
+            border: 1px solid $border-color
+            
 .filter_li
+    position: relative
     display: flex
     justify-content: space-between
     align-items: center
@@ -62,7 +138,7 @@
     font-size: .9rem
     font-weight: 400
     line-height: 1.1
-    margin-bottom: .5rem
+    margin-bottom: .675rem
 .filter_li_link
     color: #333
     text-decoration: none
@@ -73,3 +149,199 @@
 .filter_amount
     color: #999
     font-size: .8rem
+
+.filter_checkbox
+.filter_input
+    display: none
+    opacity: 0
+.filter_lable
+    display: block
+    //width: 100%	
+    overflow: hidden
+    padding-left: 25px
+    white-space: nowrap
+    text-overflow: ellipsis
+    cursor: pointer
+    user-select: none
+    transition: color .2s ease-out        
+    &:hover
+        color: darken($hover, 10%)
+    &::before		
+        content: ""
+        display: inline-block
+        height: 1rem
+        width: 1rem
+        //border: thin solid $border-color 
+        border: thin solid darken($border-color, 2% )     
+        border-radius: 2px
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)	
+
+    &::after
+        content: ""
+        display: inline-block
+        height: 6px
+        width: 7px
+        border-left: 1px solid #777
+        border-bottom: 1px solid#777
+        transform: rotate(-45deg)
+        position: absolute
+        left: 5px
+        top: 3px
+
+.filter_input + label::after
+    content: none
+
+.filter_input:checked + label::after
+    content: ""
+
+.filter_input:checked + label::before
+    content: ""
+    border: thin solid $accent
+    background-color: $accent
+
+.filter_input:focus + label::before
+    outline: 1px solid $accent
+    border: thin solid $accent
+
+
+.filter_btn_block
+    padding: 1.5rem 1rem
+    display: flex
+    justify-content: space-between
+    gap: 1rem
+.filter_reset_btn,
+.filter_apply_btn
+    width: 100%
+    height: 40px
+    display: block
+    box-sizing: border-box
+    border-radius: 5px
+.filter_reset_btn
+    border: 2px solid $ok
+    background-color: $ok
+    color: #fff
+    font-weight: 600
+    transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out
+    &:hover
+        background-color: $ok_l
+        border-color: $ok_l
+        color: #fff 
+
+.filter_apply_btn
+    border: 2px solid $accent    
+    background-color: $accent
+    color: #444
+    font-weight: 600
+    transition: background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out
+    &:hover
+        background-color: #FFCA3A
+        border-color: #FFCA3A
+        color: $textcolor
+
+
+.filter_price_filds
+    display: flex
+    justify-content: space-between
+    justify-items: center
+    padding: 10px 0
+    margin-bottom: 1rem
+	
+.filter_price_fild
+    display: block
+    width: 45%
+    position: relative
+    &::before
+        display: block
+        width: 28px
+        height: 28px
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 2px
+        font-size: .9em
+        line-height: 30px
+        text-align: center
+        color: lighten($textcolor, 35%)
+
+.filter_price_fild.min::before
+    content: 'от'
+.filter_price_fild.max::before
+    content: 'до'
+
+.filter_price_fild
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input[type=number]
+        -moz-appearance: textfield
+        &::-webkit-input-placeholder
+            color: lighten($textcolor, 35%)
+        &::-moz-placeholder
+            color: lighten($textcolor, 35%)
+        &:-ms-input-placeholder
+            color: lighten($textcolor, 35%)
+
+.filter_price_min,
+.filter_price_max
+    width: 100%
+    box-sizing: border-box
+    border: 1px solid $border-color
+    background-color: #fff
+    border-radius: 3px
+    padding-left: 32px
+    padding-right: 5px
+    overflow: hidden
+    font-size: .95em
+    line-height: 28px
+    color: $textcolor
+
+.filter_content
+    .noUi-horizontal
+        height: 6px
+    .noUi-connect
+        background: $accent
+    .noUi-target
+        background: #fafafa
+        border: 1px solid lighten(#d3d3d3, 5%)
+
+    .noUi-horizontal .noUi-handle
+        width: 30px
+        height: 30px
+        top: -13px
+        border: none
+        border-radius: 0
+        background: none
+        cursor: pointer
+        box-shadow: none
+        outline: none
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            height: 20px
+            width: 20px
+            border: 6px solid #333
+            border-radius: 50%
+            background: #fff
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+
+    .noUi-handle:after, 
+    .noUi-handle:before
+        background: transparent
+
+.filter_price_range
+    margin-bottom: 1rem
+    padding-left: .5rem
+    padding-right: .5rem
+
+@media (max-width: 992px)
+    .mobail_btn_filter_close
+        display: block
+    
+         

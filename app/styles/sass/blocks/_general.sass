@@ -113,12 +113,35 @@ main
     gap: 2rem
     margin-bottom: 4rem
 .sidebar
+    background-color: #fff
     
 .content
     border: 1px solid red
     min-height: 70vh
+main.content
+    padding-top: 0
 
 
+@media (max-width: 1200px) 
+    .grid
+        grid-template-columns: 280px calc( 100% - 280px)
+        gap: 1rem
 
+@media (max-width: 992px) 
+    .grid
+        display: block
+        //position: relative
+        overflow: hidden
+    .sidebar
+        width: 100%
+        position: absolute
+        top: 0
+        right: -100%
+        //left: 0
+        //overflow-y: auto
+        
+        
+         
 
-
+    .content
+        width: 100%

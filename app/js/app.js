@@ -109,61 +109,62 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	})
 	// slider - swiper.js
-	const MainSlider = new Swiper('#slider', {
-		enabled:  true,//false - отключает смену слайдов, показывается 1 доступный, удалить или смнить на true
-		speed: 1000,
-		loop: true,
-		parallax: true,
-		effect: "fade",
-		fadeEffect: {
-			crossFade: true
-		},
-		autoplay: {
-			delay: document.getElementById('sliderWruper').dataset.delay ? document.getElementById('sliderWruper').dataset.delay : 5000,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-		},
-		navigation: {
-			nextEl: '.swiper-btn-next',
-			prevEl: '.swiper-btn-prev',
-		},
-	});
-
-
-
-
-	const brands = new Swiper('#brands', {
-		speed: 500,
+	if(document.getElementById('slider')){
+		const MainSlider = new Swiper('#slider', {
+			enabled:  true,//false - отключает смену слайдов, показывается 1 доступный, удалить или смнить на true
+			speed: 1000,
 			loop: true,
+			parallax: true,
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
 			autoplay: {
-				delay: 5000,
+				delay: document.getElementById('sliderWruper').dataset.delay ? document.getElementById('sliderWruper').dataset.delay : 5000,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true,
 			},
-			breakpoints: {
-			320: {
-			slidesPerView: 2,
-			spaceBetween: 0
+			navigation: {
+				nextEl: '.swiper-btn-next',
+				prevEl: '.swiper-btn-prev',
 			},
-				576: {
-			slidesPerView: 3,
-			spaceBetween: 20
-			},
-				768: {
-			slidesPerView: 3,
-			spaceBetween: 20
-			},    
-			992: {
-			slidesPerView: 4,
-			spaceBetween: 20
-			},   
-			1200: {
-			slidesPerView: 6,
-			spaceBetween: 15
-			}
-		}
-	});
+		});
+	}
 
+
+	if(document.getElementById('brands')){
+		const brands = new Swiper('#brands', {
+			speed: 500,
+				loop: true,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+				breakpoints: {
+				320: {
+				slidesPerView: 2,
+				spaceBetween: 0
+				},
+					576: {
+				slidesPerView: 3,
+				spaceBetween: 20
+				},
+					768: {
+				slidesPerView: 3,
+				spaceBetween: 20
+				},    
+				992: {
+				slidesPerView: 4,
+				spaceBetween: 20
+				},   
+				1200: {
+				slidesPerView: 6,
+				spaceBetween: 15
+				}
+			}
+		});
+	}
 
     /*--tabs--*/
 	document.querySelectorAll('.advice_li').forEach(function (elem) {
@@ -184,6 +185,67 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	});
+
+
+		
+
+
+	if(document.getElementById('filter')){
+		let priceRange = document.getElementById('priceRange');
+		const input0 = document.getElementById('input-0');
+		const input1 = document.getElementById('input-1');
+		const inputs = [input0, input1];
+		let priceMin = Number(input0.getAttribute('min'));
+		let priceMax = Number(input0.getAttribute('max'));
+		noUiSlider.create(priceRange, {	
+			start: [priceMin, priceMax],
+			connect: true,
+			priceMin,
+			range: {
+				'min': priceMin,
+				'max': priceMax
+			}
+		});		
+		priceRange.noUiSlider.on('update', function(values, handle){
+			inputs[handle].value = Math.round(values[handle]);
+		});
+		const setRangeSlider = (i, value) => {
+			let arr = [null, null];
+			arr[i] = value;
+			priceRange.noUiSlider.set(arr);
+		};
+		inputs.forEach((el, index) => {
+			el.addEventListener('change', (e) => {
+				setRangeSlider(index, e.currentTarget.value);
+			});
+		});
+
+		document.querySelectorAll('.filter_item_btn').forEach((itemBtn) =>{			
+			itemBtn.addEventListener('click', (elem)=>{
+				elem.preventDefault();
+				const icon = elem.target.nextElementSibling;				
+				const parent = icon.parentElement.parentElement;
+				const content = parent.querySelector('.filter_content');
+				if(icon.classList.contains('icon-chevron-down-light')){
+					icon.classList.remove('icon-chevron-down-light');
+					icon.classList.add('icon-chevron-up-light');
+					slideUp(content, 500);
+				} else if(icon.classList.contains('icon-chevron-up-light')){
+					icon.classList.remove('icon-chevron-up-light');
+					icon.classList.add('icon-chevron-down-light');
+					slideDown(content, 500);
+				}
+				
+			});
+		})
+		
+		document.getElementById('filterResetBtn').addEventListener('click', ()=>{
+			document.querySelectorAll('.filter_input').forEach((inp)=>{
+				if(inp.checked = true) inp.checked = false;				
+			})
+			priceRange.noUiSlider.reset();
+		});
+	}
 
 
 }) /* -- END --*/
