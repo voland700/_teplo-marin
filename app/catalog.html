@@ -32,10 +32,21 @@
                     </button>
                 </div>
 
+                <div class="sorting_order">
+                    <select class="sorting_select" id="sortingSelect" name="sorting">
+                        <option value="">Сортировка</option>
+                        <option value="order">По порядку</option>
+                        <option value="price">По цене (убыванию)</option>
+                        <option value="descending_price">По названию (А - Я)</option>
+                        <option value="descending_age">По названию (Я - А)</option>                       
+                    </select>
+                </div>
+
             </div>
 
-            <div class="products">
-                <div class="products_inner">
+            <div class="list">
+                <div class="list_inner">
+                    <!--#include virtual="/parts/products.html" -->
 
 
                 </div><!-- ./inner-->

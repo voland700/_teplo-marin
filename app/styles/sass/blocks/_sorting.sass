@@ -3,6 +3,7 @@
     justify-content: space-between
     align-items: center
     height: 32px
+    margin-bottom: 1.5rem
 
 .sorting_btn_block
     display: flex
@@ -35,7 +36,33 @@
     svg
         fill: #333
 
-    
-.sorting_btn.btn_grid
+.sorting_order
+    position: relative
+    &::after
+        content: ""
+        display: inline-block
+        height: 7px
+        width: 7px
+        border-left: 1px solid #777
+        border-bottom: 1px solid #777
+        transform: rotate(-45deg)
+        position: absolute
+        right: 12px
+        top: 10px
+        z-index: 5
 
-.sorting_btn.btn_list
+        //background-color: red  
+
+.sorting_select    
+    appearance: none
+    background: #fff
+    height: 32px
+    padding: 0.1rem 0.5rem
+    border: 1px solid $border-color
+    color: #333
+    font-size: 0.9rem
+    padding-right: 2rem
+    outline: none
+    &:focus
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, .05)
+    
