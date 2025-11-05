@@ -1,11 +1,10 @@
 .list_wrap
-	margin-bottom: 2rem
 
 .list_inner
 	display: grid
 	grid-template-columns: repeat(4, 1fr)
 	grid-auto-rows: auto
-	gap: 1rem
+	gap: 0
 	margin-bottom: 2rem
 	.card_inner
 		//margin-top: -1px
@@ -16,20 +15,13 @@
 	grid-template-columns: 1fr
 	grid-auto-rows: auto
 
-.category_descripotion
-	color: #444
-	h2, h3
-		margin: 1.5rem 0 1.5rem
-	h2	
-		font-size: 1.8rem
-	h3 
-		font-size: 1.6rem
+
 
 @media (max-width: 1400px) 
 	.list_inner
 		grid-template-columns: repeat(3, 1fr)
 
-@media (max-width: 768px)
+@media (max-width: 768px) 
 	.list_inner,
 	.list_inner.list
 		grid-template-columns: repeat(2, 1fr)

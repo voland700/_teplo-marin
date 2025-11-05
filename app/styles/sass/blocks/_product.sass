@@ -1,0 +1,60 @@
+.product
+.product_top
+    display: grid
+    grid-template-columns: 5fr 5fr 2fr
+    grid-template-rows: 1fr
+    gap: 2rem
+
+
+.product_images_block
+.product_img_main
+    width: 100%
+    position: relative
+    margin-bottom: 1.5rem
+
+
+    &::before		
+        content: ''
+        display: block
+        padding-top: 110%
+.prodact_img_link
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 0
+.product_img	 
+    max-width: 100%
+    max-height: 100%
+    margin: auto
+
+
+
+
+.product_img_prev_wrap
+.product_img_prev_ul
+    display: flex
+.product_img_prev_li
+    display: block
+    width: 90px
+    height: 90px
+    position: relative
+    border: 1px solid $border-color
+    
+
+.product_img_prev_link
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    inset: 0
+    overflow: hidden
+    padding: 2px
+    
+.product_img_prev
+    object-fit: cover
+    max-width: 100%
+    object-position: 50% 50%
+    

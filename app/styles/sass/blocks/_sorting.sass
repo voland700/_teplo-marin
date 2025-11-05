@@ -24,12 +24,17 @@
         fill: #999
         transition: fill .2s ease-out
     
-    &:hover
+    &:hover,
+    &:focus
         background-color: $accent
         svg
             fill: #333
 
-
+.btn_mobail_filter_up
+    display: block
+    width: 36px
+    height: 32px
+    
 
 .sorting_btn.active
     background-color: $accent
@@ -65,4 +70,24 @@
     outline: none
     &:focus
         box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, .05)
-    
+
+.btn_mobail_filter_up
+    display: none
+    justify-content: center
+    align-items: center
+    width: 36px
+    height: 32px
+    border: 1px solid $border-color
+    background-color: transparent
+    transition: background-color .2s ease-out, color .2s ease-out 
+    color: $textcolor
+    &:hover,
+    &:focus
+        background-color: $accent
+        color: #333
+   
+@media (max-width: 992px)
+    .sorting_btn_block
+        display: none
+    .btn_mobail_filter_up
+        display: flex
