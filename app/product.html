@@ -24,69 +24,186 @@
         <div class="product_top">
             <div class="product_images_block">
                 <div class="product_img_main">
-                    <a href="/images/src/detail/1.jpg" class="prodact_img_link">
-                        <img src="/images/src/detail/1.jpg" alt="product" class="product_img">
+                    <a href="javascript:;" class="prodact_img_link"  id="mainImgLink"
+                        data-fancybox-trigger="gallery" data-fancybox-index="0">
+                        <img src="/images/src/detail/1.jpg" alt="product" class="product_img" id="mainImg">
+                    </a>
+                </div>
+                
+                <div class="product_img_prev_block">
+                    <span class="product_images_next" id="ImagesSliderNext"><span class="icon-chevron-left-regular"></span></span>
+                    <div class="product_img_prev_wrap swiper-container" id="thambBlock">   
+                        <ul class="product_img_prev_ul swiper-wrapper">
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/1.jpg" class="product_img_prev_link" 
+                                    data-fancybox="gallery" data-src="/images/src/detail/1.jpg" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/1.jpg" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/2.png" class="product_img_prev_link" 
+                                    data-fancybox="gallery" data-src="/images/src/detail/2.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/2.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/3.png" class="product_img_prev_link" 
+                                    data-fancybox="gallery" data-src="/images/src/detail/3.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/3.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/4.png" class="product_img_prev_link"  
+                                    data-fancybox="gallery"  data-src="/images/src/detail/4.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/4.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/5.jpg" class="product_img_prev_link" 
+                                    data-fancybox="gallery"  data-src="/images/src/detail/5.jpg" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/5.jpg" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/1.jpg" class="product_img_prev_link"  
+                                    data-fancybox="gallery"  data-src="/images/src/detail/1.jpg" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/1.jpg" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/2.png" class="product_img_prev_link" 
+                                    data-fancybox="gallery"  data-src="/images/src/detail/2.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/2.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/3.png" class="product_img_prev_link" 
+                                    data-fancybox="gallery"  data-src="/images/src/detail/3.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/3.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="product_img_prev_li swiper-slide">
+                                <a href="/images/src/detail/4.png" class="product_img_prev_link"  
+                                    data-fancybox="gallery"  data-src="/images/src/detail/4.png" data-caption="Садовая печь гриль Везувий «От Шефа»">
+                                    <span class="product_img_prev_inner">
+                                        <img src="/images/src/detail/4.png" alt="product" class="product_img_prev">
+                                    </span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div> 
+                    <span class="product_images_prev" id="ImagesSliderPrev"><span class="icon-chevron-right-regular"></span></span>
+                </div>
+            </div><!-- ./ IMAGES -->
+
+            <div class="product_info_block">
+                <div class="product_info_brief">
+                    Мангал на подставке с крышкой и уличная печь по казан в комплекте, комбо Везувий От Шефа 
+                    – уличные очаги для приготовления различных блюд открытом воздухе.
+                </div>
+
+                <div class="product_info_atr_block">
+                    <div class="product_info_atr_wrap">
+                        <div class="product_info_atr_item">
+                            <span class="def">Наличие:</span><span class="value green">в наличии</span>
+                        </div>
+                        <div class="product_info_atr_item">
+                            <span class="def">Артикул:</span><span class="value sku">00000018764</span>
+                        </div>
+                    </div>
+                    <a href="#" class="product_info_brand_link">
+                        <img src="/images/src/brends/vezuviy.jpg" alt="Везувий" class="product_info_brand_logo">
                     </a>
                 </div>
 
-                <div class="product_img_prev_wrap">
-                    <ul class="product_img_prev_ul">
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/1.jpg" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/2.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/3.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/4.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/5.jpg" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/1.jpg" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/2.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/3.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                        <li class="product_img_prev_li">
-                            <a href="#" class="product_img_prev_link">
-                                <img src="/images/src/detail/4.png" alt="product" class="product_img_prev">
-                            </a>
-                        </li>
-                    </ul>
+                <div class="product_info_price_wrap">
+                    <span class="product_info_price">36 250 руб</span>
+                    <span class="product_info_price_old">38 780 руб</span>
                 </div>
-            </div><!-- ./ IMAGES -->
+
+                <div class="product_buy_wrap">
+					<form action="#" method="POST" class="product_buy_form" id="buyProduct">
+						<div class="product_counter_wrap">
+							<span class="product_counter__btn" data-direction="minus">-</span>
+							<input type="number" name="QUANTITY" value="1" size="5" id="QUANTITY" class="product_counter__value">
+							<span class="product_counter__btn" data-direction="plus">+</span>
+						</div>
+						<button class="product_buy_btn __disabled" id="BuyBtn">В корзину</button>
+					</form>
+					<button class="product_buy_click" id="BuyClick" data-fancybox data-src="#modalBuyClick"	data-big="Быстрая покупка" data-small="В 1 клик">Купить в 1 клик</button>
+				</div> 
+
+                <div class="product_advantages_block">
+                    <div class="product_advantages_item">
+                        <div class="product_advantages_img_wrap">
+                            <a href="#" class="product_advantages_img_link">
+                                <img src="/images/src/advantages/bricks.jpg" alt="advantages" class="product_advantages_img">
+                            </a>
+                        </div>
+                        <div class="product_advantages_info">
+                            <h3 class="product_advantages_title"><a href="#" class="product_advantages_link">Поддоны в подарок!</a></h3>
+                            <div class="product_advantages_text">
+                                При покуке оптовых партий кирпича - от 3 000 шт. - <span class="exude-bold">поддоны в подарок</span>!							
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product_advantages_item">
+                        <div class="product_advantages_img_wrap">
+                            <a href="#" class="product_advantages_img_link">
+                                <img src="/images/src/advantages/car.jpg" alt="advantages" class="product_advantages_img">
+                            </a>
+                        </div>
+                        <div class="product_advantages_info">
+                            <h3 class="product_advantages_title"><a href="#" class="product_advantages_link">Профессиональным печникам скидки и подарки!</a></h3>
+                            <div class="product_advantages_text">
+                                <ul>
+                                    <li>При покупке поддона кирпича второй в подарок!</li>
+                                    <li>Бесплатная доставка манипулятором по всей России</li>
+                                    <li>Погрузо-разгрузочные работы нашими грузчиками!</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                    
+
+
+
+                    
+           
+            <div class="product_banners_block">Баннеры</div>
         </div>
+
+        
+
 
 
 
 
     </div>
 
-
+    <div style="height: 500px;"></div>
 </div>
 <script>
 

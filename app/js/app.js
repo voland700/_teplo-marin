@@ -272,4 +272,45 @@ document.addEventListener('DOMContentLoaded', () => {
 	counter();
 
 
+
+	//*--- IMAGES on detail product  ---*//
+	if(document.getElementById('thambBlock')){
+		const mainImgLink = document.getElementById('mainImgLink');
+		const mainImg = document.getElementById('mainImg');
+
+		const gallery = new Swiper("#thambBlock", {
+			slidesPerView: 5,
+			spaceBetween: 5,
+			slidesPerGroup: 1,
+			centerInsufficientSlides: true,
+			navigation: {
+				nextEl: "#ImagesSliderPrev",
+				prevEl: "#ImagesSliderNext",
+			},
+		});
+
+		if(gallery.slides.length <= gallery.params.slidesPerView){
+			document.getElementById('ImagesSliderPrev').style.display = 'none';
+			document.getElementById('ImagesSliderNext').style.display = 'none';
+			document.getElementById('thambBlock').style.width = '100%';
+		}
+	
+		document.querySelectorAll('.product_img_prev_link').forEach(function(elem, i){
+			elem.addEventListener('click', function (event){
+				event.preventDefault();
+				mainImgLink.dataset.fancyboxIndex = i;
+				let pathImg = event.currentTarget.getAttribute('href');
+				mainImg.setAttribute('src', pathImg);
+			});
+		});		
+
+		Fancybox.bind('[data-fancybox="gallery"]', {
+			Thumbs: {
+				type: "classic",
+			},
+      	}); 	
+
+
+	}
+
 }) /* -- END --*/
