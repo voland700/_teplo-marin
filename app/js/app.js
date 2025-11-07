@@ -308,9 +308,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			Thumbs: {
 				type: "classic",
 			},
-      	}); 	
-
-
+      	}); 
 	}
+
+	// for fancybox
+	Fancybox.bind("[data-fancybox]", {
+	// Your custom options
+	});
+
+
 
 }) /* -- END --*/
