@@ -1,0 +1,106 @@
+.catalog_wrap
+	display: flex
+	flex-wrap: wrap
+.catalog_item_block
+	position: relative
+	display: block
+	width: 50%	
+	margin-bottom: 2.5rem
+.catalog_item
+	padding: 15px
+.catalog_item_inner
+	display: flex
+	justify-content: space-between
+
+.catalog_img_link
+	width: 30%
+	display: block
+
+.catalog_img
+	max-width: 100%
+	width: 150px
+	height: auto
+	margin: 0 auto
+.catalog_categories_block
+	width: calc( 70% - 30px  )
+.catalog_ategory_h3
+	font-size: 1rem
+	font-weight: 500
+.catalog_category_link
+	color: #333
+	text-decoration: none
+	transition: color .25s ease 0s
+	&:hover
+		color: $accent
+
+.catalog_list
+	color: $textcolor
+	text-decoration: none
+	list-style: none
+	padding-left: 14px
+	margin-bottom: 0
+.catalog_list_item
+	font-size: .95rem
+.catalog_list_link
+	position: relative
+	color: $textcolor
+	text-decoration: none
+	transition: color .25s ease 0s
+	&::before
+		content: '●'
+		position: absolute
+		top: 2px
+		left: -15px
+		font-size: .7rem
+		line-height: .95rem
+		color: $grey
+		color: #fff
+	&:hover
+		color: $accent
+		&::before
+			color: $accent
+
+@media (max-width: 768px)
+	.catalog_item_inner
+		flex-wrap: wrap
+		flex-direction: column
+		justify-content: space-between
+
+	.catalog_img_link
+		width: 75%
+		margin: 0 auto 1rem auto
+	.catalog_img
+		max-width: 130px	
+	.catalog_categories_block
+		width: 100%
+@media (max-width: 500px)
+		
+	.catalog_item_block
+		width: 100%
+		padding-bottom: 1.5rem
+		margin-bottom: 1.5rem
+		&::after
+			content: ''
+			display: block
+			width: 100px
+			height: 2px
+			background-color: #ced4da
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+		&:last-child
+			&::after
+				display: none
+
+	.catalog_img_link
+		max-width: 130px
+		margin: 0 auto 1.5rem
+	.catalog_ategory_h3	
+		text-align: center
+		font-size: 1.1rem
+	.catalog_list
+		padding-left: 0	
+	.catalog_list_item
+		text-align: center	
+		font-size: 1rem

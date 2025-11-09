@@ -31,7 +31,16 @@
 			//background-color: $accent
 			background-color: #2c7a99
 			//background-color: darken($ok_l, 3%)
-		
+			&:disabled
+				background-color: $ok_disabled	 
+				cursor: auto
+				opacity: .8			
+				&:hover	
+					background-color: $ok_disabled
+				
+.to_basket
+	color: #fff
+	text-decoration: none
 
 .card_img_wrap
 	position: relative
@@ -189,9 +198,18 @@
 	transition: color .2s ease-out, background-color .2s ease-out
 	&:hover			
 		color: $bg_light
-		//background-color: #1D5C80
-		//background-color: lighten($ok_l, 5%)
-		background-color: #2c7a99
+		background-color: $ok_hover
+	&:disabled
+		background-color: $ok_disabled	 
+		cursor: auto
+		//color: rgba(#fff, .8)
+		opacity: .8
+		&:hover	
+			background-color: $ok_disabled
+
+			
+
+
 
 .card_counter_wrap
 	width: 48%

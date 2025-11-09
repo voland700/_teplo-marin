@@ -316,6 +316,62 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Your custom options
 	});
 
+	
+	function addtoCart(){
+		let cardBtns = document.querySelectorAll('.card_btn');
+		
+		if (!cardBtns) return false;
+		cardBtns.forEach(function(btn){	
+
+			btn.addEventListener('click', (event)=>{
+				event.preventDefault();		
+
+				//console.log(event.currentTarget);		
+
+				alert("!!!!!!!!!!")
+
+				const exemplAnswer = {
+					img: '/images/src/products/vezuviy_hr15.jpg',
+					name: 'Название товара',
+					qty: 1
+				}
+
+				Swal.fire({
+					title: "Good job!",
+					text: "You clicked the button!",
+					icon: "success"
+				});
+
+
+/*
+				Swal.fire({
+					title: "Товара в корзине",
+					text: exemplAnswer.name,
+					imageUrl: exemplAnswer.img,
+					imageWidth: 300,
+					imageHeight: 300,
+					imageAlt: exemplAnswer.name,
+					showCloseButton: true,
+					showCancelButton: true,
+					confirmButtonColor: "#3085d6",
+					cancelButtonColor: "#00b820",
+					confirmButtonText: 'Продолжить',  
+					cancelButtonText:  '<a href="/personal/cart/" class="to_basket">В корзину</a>' 
+				});
+
+*/
+
+
+			});
+		});
+	}
+
+	addtoCart();
+	
+
+
+
+
 
 
 }) /* -- END --*/
