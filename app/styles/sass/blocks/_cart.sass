@@ -1,0 +1,305 @@
+.cart_content
+    margin-bottom: 5rem
+.cart_info
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding: 1.2rem 3rem 1.2rem 1rem
+    background-color: #f5f5f5
+    border: 1px solid darken(#f5f5f5, 2%)
+    border-radius: 10px
+    margin-bottom: 1.5rem
+.cart_resault
+    font-size: 1.1em
+    font-weight: 500
+    margin-right: 1.5rem
+    color: #333
+.cart_btn
+    display: block
+    box-sizing: border-box
+    padding: 5px	15px
+    text-decoration: none
+    background-color: #00b74a
+    box-sizing: border-box
+    border: 0
+    border-radius: 3px
+    color: #fff
+    text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+    box-shadow: 0 4px 10px 0 rgba(#000, .2), 0 4px 20px 0 rgba(#000, .1)
+    transition: border-color 70ms ease-out, background-color 70ms ease-out
+    &:hover,
+    &:focus
+        text-decoration: none
+        color: #ffffff
+        background-color: #1abe5c
+        box-shadow: 0 2px 5px 0 rgba(#000, .2), 0 2px 10px 0 rgba(#000, .1)
+
+
+
+.cart_wrap
+.cart_header
+    height: 50px
+    padding: 0 1rem
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding-right: 4rem
+    border: 1px solid darken(#f5f5f5, 2%)
+    border-radius: 10px 10px 0 0
+    background-color: #f5f5f5
+    color: #333
+
+
+.cart_number
+    font-size: .9em
+    font-weight: 500
+.cart_list
+.cart_item
+    display: flex
+    align-items: center
+    padding: 1rem
+    margin-top: -1px
+    border: 1px solid darken(#f5f5f5, 2%)
+
+.cart_img_wrap
+    position: relative
+    width: 100px
+    height: 100px
+    margin-right: 1rem
+
+.cart_img_link
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+.cart_img
+    display: block
+    max-width: 90%
+    max-height: 90%
+    margin-left: auto
+    margin-right: auto
+.cart_item_content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    width: calc( 100% - 135px )
+
+
+.cart_item_mame
+    width: calc( 100% - 350px )
+
+.cart_item_name_link
+    color: $textcolor
+    text-decoration: none
+    transition: color 70ms ease-out
+    &:hover,
+    &:focus
+        color: $ok_hover
+.cart_item_content_manager
+    width: 350px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+.cart_counter
+    display: flex
+    width: 100px
+    height: 36px
+    box-sizing: border-box
+    text-align: center
+    background-color: #f5f5f5
+    border: 3px solid #f5f5f5
+    margin: 0 1rem
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input[type=number]
+        -moz-appearance: textfield
+        &::-webkit-input-placeholder
+            color: lighten($textcolor, 35%)
+        &::-moz-placeholder
+            color: lighten($textcolor, 35%)
+        &:-ms-input-placeholder
+            color: lighten($textcolor, 35%)
+.cart_counter__btn
+    width: 30%
+    line-height: 30px
+    text-align: center
+    transition: color .2s ease-out
+    cursor: pointer
+    user-select: none
+    &:hover,
+    &:focus
+        color: $accent
+
+.cart_counter__value
+    width: 40%
+    border: 0
+    color: #5e5e5e
+    background-color: #fff
+    border-radius: 0
+    text-align: center
+    padding: 7px 3px
+    overflow: hidden
+
+
+.cart_item_sum_l,
+.cart_item_sum
+    width: 108px
+    font-weight: 500
+    color: #333
+.cart_item_sum_l
+    text-align: right
+.cart_item_sum
+
+
+.cart_item_total_wrap
+    position: relative
+.cart_item_old
+    display: inline-block
+    position: absolute
+    top: -.5rem
+    width: 100%
+    font-size: .8em
+    color: #999
+    margin-top: -15px
+    text-decoration: line-through
+    text-align: right
+.cart_item_staff
+    display: inline-block
+    position: absolute
+    bottom: -1.25rem
+    font-size: .75rem
+    color: #999
+.cart_item_del
+    display: block
+    width: 20px
+    margin-left: 15px
+
+.icon-close
+    cursor: pointer
+    font-size: .9em
+    color: red
+
+@media (max-width: 992px)
+    .cart_item
+        padding-bottom: 25px
+    .cart_item_mame
+        width: 100%
+        margin-bottom: 1.5rem
+    .cart_item_content_manager
+        margin-left: auto
+    .cart_item_del
+        margin: 0.5rem 0 auto 0.5rem
+
+@media (max-width: 768px)	
+    .cart_info
+        padding: 1rem
+    .cart_item
+        position: relative
+        flex-wrap: wrap
+        justify-content: center
+        padding-bottom: 35px
+
+    .cart_img_wrap
+        width: 50%
+        order: 1
+
+
+    .cart_item_content
+        width: 100%
+        order: 3
+    .cart_item_mame
+        text-align: center
+    .cart_item_content_manager
+        margin: 0 auto
+    .cart_item_del
+        order: 2
+        position: absolute
+        top: 15px
+        right: 15px
+        margin: 0
+
+
+
+@media (max-width: 576px)
+    .cart_header
+        justify-content: center
+        padding-right: 0
+    .cart_img_wrap
+        order: 1
+        margin: 0 auto
+    .cart_item_content_manager
+        width: 100%
+
+@media only screen and (max-width : 500px)
+    .cart_resault
+        margin: 0 auto
+    .cart_counter
+        order: 3
+        width: 150px
+        height: 42px
+        font-size: 1.2em
+        margin: 2rem auto 0 auto
+    .cart_counter__btn
+        line-height: 36px
+
+    .cart_item_sum_l
+        width: 50%
+        order: 1
+        font-size: 1.2rem
+        text-align: center
+    .cart_item_total_wrap
+        width: 50%
+        order: 2
+        text-align: center
+    .cart_item_sum
+        display: inline
+        width: 100%
+        font-size: 1.2rem
+    .cart_item_old
+        display: none
+    .cart_item_staff
+        display: inline-block
+        position: unset
+        margin-left: .25rem
+        span
+            display: none
+
+@media only screen and (max-width : 440px)
+    .cart_info
+        justify-content: space-between
+    .cart_resault_text
+        display: none
+
+@media only screen and (max-width : 420px)
+    .cart_item_total_wrap
+        display: none
+    .cart_item_sum_l
+        width: 100%
+        font-size: 1.5rem
+
+
+
+@media only screen and (max-width : 390px)
+    .cart_resault
+        margin: 0
+
+@media only screen and (max-width : 370px)
+    .cart_info
+        flex-wrap: wrap
+        justify-content: center
+    .cart_resault
+        width: 100%
+        font-size: 1.2em
+        font-weight: 500
+        text-align: center
+        margin: 0 auto .75rem auto
+    .cart_resault_text
+        display: inline-block
+        margin-right: .5rem

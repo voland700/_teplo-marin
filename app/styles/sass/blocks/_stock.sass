@@ -1,0 +1,61 @@
+.stock
+    //background-color: $bg_light
+    background-color: #f9f9fa
+    padding: 3rem 0 4.5rem 0
+    margin-bottom: 6rem
+    .main_h2
+        display: inline-block
+        margin-right: 1rem
+.stock_wrap
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: auto
+    gap: 1rem
+    
+.stock_item
+    width: 100%
+    box-sizing: border-box
+    border: 2px solid darken(#f9f9fa, 3% )
+    border-radius: 3px
+    background-color: #fff
+    transition: border-color 70ms ease-out    
+    &:hover
+        border-color: darken(#f9f9fa, 5%)
+        .stok_title_link
+            color: $sd-opposit
+
+
+    
+.stock_img_wrap
+    width: 100%
+
+.stok_img_link
+    display: block
+    position: relative
+.stock_img
+    width: 100%
+.stock_title_block
+    padding: .5rem .75rem
+    background-color: #fff
+
+.stok_title_link
+    //color: $textcolor
+    color: #444
+    text-decoration: none
+    transition: color 70ms ease-out
+.stock_title
+    font-size: 1rem
+    line-height: 1.25
+    font-weight: 400
+    margin-bottom: 0
+
+
+@media (max-width: 992px)
+    .stock_wrap
+        grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 490px) 
+    .stock_wrap
+        grid-template-columns: 1fr
+    .stock_title
+        font-size: 1.05rem

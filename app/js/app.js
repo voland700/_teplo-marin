@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				//console.log(event.currentTarget);		
 
-				alert("!!!!!!!!!!")
+				
 
 				const exemplAnswer = {
 					img: '/images/src/products/vezuviy_hr15.jpg',
@@ -336,14 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					qty: 1
 				}
 
-				Swal.fire({
-					title: "Good job!",
-					text: "You clicked the button!",
-					icon: "success"
-				});
-
-
-/*
 				Swal.fire({
 					title: "Товара в корзине",
 					text: exemplAnswer.name,
@@ -358,9 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					confirmButtonText: 'Продолжить',  
 					cancelButtonText:  '<a href="/personal/cart/" class="to_basket">В корзину</a>' 
 				});
-
-*/
-
 
 			});
 		});

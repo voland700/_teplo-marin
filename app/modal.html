@@ -56,11 +56,25 @@
 				</form>
 			</div>
 
-
-
+<br><br>
+<button id="exemplBtn">SweetAlert2</button>
 
 
 
 
 </div>
+
+
+<script>
+	document.getElementById('exemplBtn').addEventListener('click', (e)=>{
+		e.preventDefault();
+		alert("!!!!!!!!");
+			Swal.fire({
+			title: "Good job!",
+			text: "You clicked the button!",
+			icon: "success"
+		});		
+	})
+
+</script>
 <!--#include virtual="/parts/footer.html" -->

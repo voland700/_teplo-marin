@@ -1,0 +1,122 @@
+.article_block
+    margin-bottom: 4rem
+    color: #444
+
+.article_block.left	
+    .article_image_wrap
+        display: inline-block
+        width: 500px
+        float: left
+        margin-right: 1.5rem
+        padding: 2px
+    .article_summary
+        display: inline-block
+        width: calc( 100% - 508px - 1rem )
+
+
+
+.article_block.right
+    .article_image_wrap
+        display: inline-block
+        width: 500px
+        float: right
+        margin-left: 1.5rem
+        padding: 2px
+    .article_summary
+        display: inline-block
+        width: calc( 100% - 510px - 1rem )
+
+
+.article_image_wrap
+    margin-bottom: 1.5rem
+    border: 1px solid $border-color
+    border-radius: 3px
+.article_image
+    width: 100%
+    height: auto
+
+.article_summary
+    margin-bottom: 2rem
+    padding-bottom: 1rem
+    border-bottom: 2px solid rgba($ok_disabled, .5)
+    font-size: 1rem
+
+    
+.product_description,   
+.article
+    font-size: 1rem
+    line-height: 1.6
+    ul, ol
+        padding-left: 15px
+    ul li
+        list-style: none
+        position: relative
+        padding-left: 25px
+        margin-bottom: 4px
+        &::before
+            content: "\25CF"
+            padding: 0px
+            margin-left: 0px
+            width: 20px
+            display: inline-block
+            vertical-align: top
+            display: inline
+            zoom: 1
+            position: absolute
+            top: 6px
+            left: 7px
+            color: rgba($ok_disabled, .7)
+            font-size: .5rem
+            line-height: 1.7
+    ol
+        padding-left: 35px
+        li
+            //list-style: none
+            position: relative
+            padding-left: 7px
+            margin-bottom: 4px
+    h2
+        font-size: 1.8rem
+        margin-top: 1.5rem
+        margin-bottom: 1.25rem
+
+    h3
+        font-size: 1.5rem
+        margin-top: 1.5rem
+        margin-bottom: 1.25rem
+
+    blockquote
+        min-height: 40px
+        margin: 20px 0 22px
+        position: relative
+        padding: 2px 0 3px 25px
+        color: #383838
+        vertical-align: middle
+        border: none
+        &::before
+            content: ""
+            display: block
+            width: 3px
+            position: absolute
+            left: 5px
+            top: 0
+            bottom: 0
+            background-color: $accent
+
+@media (max-width: 1200px)
+    .article_block.right,
+    .article_block.left	
+        .article_image_wrap
+            width: 50%
+        .article_summary
+            width: calc( 50% - 25px )
+
+
+@media (max-width: 768px)
+    .article_block.right,
+    .article_block.left	
+        .article_image_wrap
+            width: 100%
+            margin: 0 0 1rem 0
+        .article_summary
+            width: 100%

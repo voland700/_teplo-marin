@@ -1,0 +1,73 @@
+.articles_list
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: auto
+    gap: 2rem
+    margin-bottom: 2rem
+.articles_list_item
+    box-sizing: border-box
+    //border: 1px solid $border-color
+    box-shadow: 0 0 0 1px #f2f2f2
+    border-radius: 5px
+    overflow: hidden
+
+
+    box-shadow: 0 0 0 1px #f2f2f2
+    transition: box-shadow ease .1s, border-color ease .1s
+    &:hover
+            box-shadow: 0 0 27px 0 rgba(0, 0, 0, .1)
+            .articles_list_title_link
+                color: $sd-opposit
+    &:first-child
+        grid-column: 1 / span 2
+        grid-row: 1 / 3
+        .articles_list_title
+            margin-bottom: 1rem
+            font-size: 1.05rem
+            font-weight: 600
+        .articles_list_sammary
+            display: block
+.articles_list_img_wrap
+    //margin-bottom: .5rem
+.articles_list_a_img
+.articles_list_img
+    width: 100%
+.articles_list_contrnt
+    padding: 1rem
+    overflow: hidden
+    background-color: #fff
+.articles_list_title
+    font-size: 1rem
+    font-weight: 400
+    margin-bottom: 0
+    
+
+.articles_list_title_link
+    //color: $textcolor
+    color: #333
+    text-decoration: none
+.articles_list_sammary
+    display: none
+
+@media (max-width: 1200px)
+    .articles_list
+        grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 768px)
+    .articles_list
+        grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 576px)
+    .articles_list
+        grid-template-columns: 1fr
+        &:first-child
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+            .articles_list_title
+                margin-bottom: 0
+                //font-size: 1rem
+                font-weight: 400
+            .articles_list_sammary
+                display: none
+    .articles_list_title
+        font-size: 1.05rem

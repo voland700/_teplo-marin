@@ -1,0 +1,157 @@
+<!--#set var="title" value="OptimizedHTML 5" -->
+<!--#include virtual="/parts/header.html" -->
+<div class="container">
+    <div class="breadcrumb_block">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item"><a href="/product.html">Печи-камины</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Печи-камины Везувий</li>
+            </ul>
+        </nav>
+        <h1 class="title">Корзина покупок</h1>
+    </div>
+
+    	<div class="cart_content">
+		<div class="cart_info">
+			<div class="cart_resault"><span class="cart_resault_text">Итого: </span><span id="cartResault">1 070 999</span>руб.</div>
+			<button class="cart_btn" id="cartBtn">Оформить заказ</button>
+		</div>
+
+		<div class="cart_wrap">
+			<div class="cart_header">
+				<span class="cart_number">В корзине: <span id="cartNamber">3 товара</span></span>
+			</div>
+			<div class="cart_list" id="cartList">
+
+
+				<div class="cart_item">
+					<div class="cart_img_wrap">
+						<a href="#" class="cart_img_link">
+							<img src="/images/src/cart/kirpich-kc-keramik-arenberg1-300x300.jpg" alt="Товар" class="cart_img">
+						</a>
+					</div>
+
+					<div class="cart_item_content">
+						<div class="cart_item_mame">
+							<a href="#" class="cart_item_name_link">КС-керамик красный гладкий полнотелый печной кирпич</a>
+						</div>
+
+						<div class="cart_item_content_manager">
+							<div class="cart_item_sum_l"><span class="item-sam">62 990</span> руб.</div>
+							<div class="cart_counter">
+								<span class="cart_counter__btn" data-direction="minus">-</span>
+								<input type="number" name="QUANTITY" value="1" size="5" class="cart_counter__value">
+								<span class="cart_counter__btn" data-direction="plus">+</span>
+							</div>
+
+							<div class="cart_item_total_wrap">
+
+								<div class="cart_item_sum"><span class="item-sam"></span>30 190</span> руб.</div>
+								<span class="cart_item_staff"><span>цена за</span> 1 шт</span>
+							</div>
+						</div>
+					</div>
+					<span class="cart_item_del"><span class="icon-close"></span></span>
+
+				</div>
+
+				<div class="cart_item">
+					<div class="cart_img_wrap">
+						<a href="#" class="cart_img_link">
+							<img src="/images/src/cart/mert2-300x300.jpg" alt="Товар" class="cart_img">
+						</a>
+					</div>
+
+
+					<div class="cart_item_content">
+						<div class="cart_item_mame">
+							<a href="#" class="cart_item_name_link">Мертель огнеупорный Терракот</a>
+						</div>
+
+						<div class="cart_item_content_manager">
+							<div class="cart_item_sum_l"><span class="item-sam">62 990</span> руб.</div>
+							<div class="cart_counter">
+								<span class="cart_counter__btn" data-direction="minus">-</span>
+								<input type="number" name="QUANTITY" value="1" size="5" class="cart_counter__value">
+								<span class="cart_counter__btn" data-direction="plus">+</span>
+							</div>
+
+							<div class="cart_item_total_wrap">
+								<span class="cart_item_old">35 280 руб.</span>
+								<div class="cart_item_sum"><span class="item-sam"></span>30 190</span> руб.</div>
+								<span class="cart_item_staff"><span>цена за</span> 1 шт</span>
+							</div>
+						</div>
+					</div>
+					<span class="cart_item_del"><span class="icon-close"></span></span>
+				</div>
+
+				<div class="cart_item">
+					<div class="cart_img_wrap">
+						<a href="#" class="cart_img_link">
+							<img src="/images/src/cart/IMG_20201208_13590022222-removebg-preview-300x300.png" alt="Товар" class="cart_img">
+						</a>
+					</div>
+
+					<div class="cart_item_content">
+						<div class="cart_item_mame">
+							<a href="#" class="cart_item_name_link">Кирпич огнеупорный прямой Ш-6 Черный «ГОСТ 390-2018, ГОСТ 8691-2018»</a>
+						</div>
+
+						<div class="cart_item_content_manager">
+							<div class="cart_item_sum_l"><span class="item-sam">1 062 990</span> руб.</div>
+							<div class="cart_counter">
+								<span class="cart_counter__btn" data-direction="minus">-</span>
+								<input type="number" name="QUANTITY" value="1" size="5" class="cart_counter__value">
+								<span class="cart_counter__btn" data-direction="plus">+</span>
+							</div>
+
+							<div class="cart_item_total_wrap">
+								<span class="cart_item_old">1 035 280 руб.</span>
+								<div class="cart_item_sum"><span class="item-sam"></span>1 030 190</span> руб.</div>
+								<span class="cart_item_staff"><span>цена за</span> 1 шт</span>
+							</div>
+						</div>
+					</div>
+					<span class="cart_item_del"><span class="icon-close"></span></span>
+				</div>
+
+
+			</div><!-- END LIST -->
+
+
+		</div>
+
+
+		<script>
+			if (document.getElementById('cartList')) {
+
+				document.querySelectorAll('.cart_item_del').forEach(function (link) {
+					link.addEventListener('click', removeCartItem);
+				});
+
+				function findItem(el) {
+					while ((el = el.parentElement) && !el.classList.contains('cart_item'));
+					return el;
+				}
+				function removeCartItem(e) {
+					let item = e.target;
+					while ((item = item.parentElement) && !item.classList.contains('cart_item'));
+					item.remove();
+				}
+			}
+		</script>
+	</div>
+
+
+
+
+</div>
+
+
+<script>
+
+</script>
+<!--#include virtual="/parts/footer.html" -->

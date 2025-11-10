@@ -24,14 +24,14 @@
 .catalog_categories_block
 	width: calc( 70% - 30px  )
 .catalog_ategory_h3
-	font-size: 1rem
+	font-size: 1.05rem
 	font-weight: 500
 .catalog_category_link
 	color: #333
 	text-decoration: none
 	transition: color .25s ease 0s
 	&:hover
-		color: $accent
+		color: darken($hover, 10%)
 
 .catalog_list
 	color: $textcolor
@@ -52,13 +52,13 @@
 		top: 2px
 		left: -15px
 		font-size: .7rem
-		line-height: .95rem
+		line-height: 1rem
 		color: $grey
 		color: #fff
 	&:hover
-		color: $accent
+		color: darken($hover, 10%)
 		&::before
-			color: $accent
+			color: darken($hover, 10%)
 
 @media (max-width: 768px)
 	.catalog_item_inner
