@@ -1,43 +1,66 @@
 .list_wrap
-	margin-bottom: 2rem
+    margin-bottom: 2rem
 
 .list_inner
-	display: grid
-	grid-template-columns: repeat(4, 1fr)
-	grid-auto-rows: auto
-	gap: 1rem
-	margin-bottom: 2rem
-	.card_inner
-		//margin-top: -1px
-		//margin-right: -1px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-auto-rows: auto
+    gap: 1rem
+    margin-bottom: 2rem
+    .card_inner
+        //margin-top: -1px
+        //margin-right: -1px
 
 .list_inner.list
-	display: grid
-	grid-template-columns: 1fr
-	grid-auto-rows: auto
+    display: grid
+    grid-template-columns: 1fr
+    grid-auto-rows: auto
 
 .category_descripotion
-	color: #444
-	h2, h3
-		margin: 1.5rem 0 1.5rem
-	h2	
-		font-size: 1.8rem
-	h3 
-		font-size: 1.6rem
+    color: #444
+    h2, h3
+        margin: 1.5rem 0 1.5rem
+    h2	
+        font-size: 1.8rem
+    h3 
+        font-size: 1.6rem
+
+
+.list_full
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: auto
+    //gap: 1rem
+    gap: 1rem
+    margin-bottom: 2rem
+
 
 @media (max-width: 1400px) 
-	.list_inner
-		grid-template-columns: repeat(3, 1fr)
+    .list_inner
+        grid-template-columns: repeat(3, 1fr)
+    .list_full
+        grid-template-columns: repeat(4, 1fr)
+
+@media (max-width: 992px) 
+    .list_full
+        grid-template-columns: repeat(3, 1fr)
 
 @media (max-width: 768px)
-	.list_inner,
-	.list_inner.list
-		grid-template-columns: repeat(2, 1fr)
+    .list_inner,
+    .list_inner.list
+        grid-template-columns: repeat(2, 1fr)
+    .list_full
+        grid-template-columns: repeat(2, 1fr)
 
 @media (max-width: 490px) 
-	.list_inner,
-	.list_inner.list
-		grid-template-columns: repeat(1, 1fr)
-		justify-items: center
-		gap: 2rem
-
+    .list_inner,
+    .list_inner.list
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+        gap: 2rem
+    .list_full
+        grid-template-columns: 1fr 
+        gap: 1rem
+        .card
+            position: relative
+            margin: 0 auto

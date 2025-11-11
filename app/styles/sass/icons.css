@@ -24,20 +24,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-dzen:before {
+.icon-circle-user-ligth:before {
   content: "\e91e";
 }
-.icon-rutube:before {
+.icon-circle-user-regular:before {
   content: "\e91f";
 }
-.icon-telegram:before {
+.icon-memo-circle-check-ligth:before {
   content: "\e920";
 }
-.icon-vk:before {
+.icon-memo-circle-check-regular:before {
   content: "\e921";
-}
-.icon-youtube:before {
-  content: "\e922";
 }
 .icon-bars-sort-thin:before {
   content: "\e900";

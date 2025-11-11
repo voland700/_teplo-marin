@@ -1,0 +1,57 @@
+<!--#set var="title" value="OptimizedHTML 5" -->
+<!--#include virtual="/parts/header.html" -->
+<div class="container">
+    <div class="breadcrumb_block">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/catalog.html">Каталог</a></li>
+                <li class="breadcrumb-item"><a href="/product.html">Печи-камины</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Печи-камины Везувий</li>
+            </ul>
+        </nav>
+        <h1 class="title">Печи-камины Везувий</h1>
+    </div>
+
+    <div class="person">
+
+		<div class="person_list">
+			<a href="#" class="person_list_item">
+				<span class="person_list_icon icon-memo-circle-check-regular"></span>
+				<h5 class="person_list_title">История заказов</h5>
+			</a>
+
+			<a href="#" class="person_list_item">
+				<span class="person_list_icon icon-circle-user-regular"></span>
+				<h5 class="person_list_title">Личные данные</h5>
+			</a>
+
+			<a href="#" class="person_list_item">
+				<span class="person_list_icon icon-cart-shopping-regular"></span>
+				<h5 class="person_list_title">Корзина покупок</h5>
+			</a>
+		</div>
+
+	</div>
+
+
+
+
+
+
+</div>
+
+
+<script>
+	document.getElementById('exemplBtn').addEventListener('click', (e)=>{
+		e.preventDefault();
+		alert("!!!!!!!!");
+			Swal.fire({
+			title: "Good job!",
+			text: "You clicked the button!",
+			icon: "success"
+		});		
+	})
+
+</script>
+<!--#include virtual="/parts/footer.html" -->
