@@ -228,6 +228,33 @@
                 opacity: .9
 
 
+.sidebar_banners
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+.sidebar_banner
+    width: calc( 100% - 2rem )
+    margin-bottom: 1rem
+    position: relative
+    box-sizing: border-box
+    border: 1px solid $border-color
+    border-radius: 5px
+    
+
+.sidebar_banner_link
+    display: block
+    overflow: hidden
+    
+
+    text-decoration: none
+.sidebar_banner_span
+
+.sidebar_banner_img
+    max-height: 100%
+    max-width: 100%
+    object-fit: cover
+.sidebar_banner_span
+
 
 @media (max-width: 1200px) 
     .slide-info-title
@@ -276,6 +303,8 @@
     .left_menu_img_wrap
         display: none    
     .left_menu_btn_block
+        display: none
+    .sidebar_banners
         display: none
 
 @media (max-width: 768px)
