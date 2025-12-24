@@ -1,0 +1,105 @@
+.success_order_wrap
+.success_title
+	font-size: 1.7em
+.success_sub-title
+	font-size: 1.1em
+	color: #009e40
+	margin-bottom: 1rem
+.success_list
+	position: relative
+	padding: 0 0 0 30px
+	&::before
+		content: ''
+		position: absolute
+		display: inline-block
+		width: 3px
+		height: 100%
+		top: 0
+		left: 0
+		background-color: #B8983D
+	li
+		list-style: none
+		font-style: italic
+		line-height: 1.25
+		margin-bottom: .5rem
+		&:last-child
+			margin-bottom: 0
+
+.success_item_link
+	display: inline-block
+	color: darken(#A37900, 25%)
+	text-decoration: none
+	margin-right: .5rem
+	transition: color .3s ease-ou
+	&:hover
+		color: #A37900
+
+.success_item_info
+	display: inline-block
+	font-size: .85em
+	font-style: italic
+	white-space: nowrap
+	color: darken(#b2b2b2, 20%)
+	margin-right: .5rem
+
+.success_item_price
+	white-space: nowrap
+	//font-weight: 500
+	//color: #333
+
+.success_sum
+	display: inline-block
+	margin-bottom: 1rem
+
+.success_maney
+	font-size: 1.1em
+	font-weight: 500
+	white-space: nowrap
+
+.success_way
+	margin-bottom: 1rem
+.success_order_list
+	list-style: none
+.success_way_item
+	//display: inline-block
+	color: darken(#b2b2b2, 20%)
+	font-style: italic
+	margin-left: .5rem
+
+.success_user
+	margin-bottom: 1rem
+.success_user_list
+	list-style: none
+.success_user_param
+	display: inline-block
+	width: 70px
+.success_user_value
+	display: inline-block
+
+	font-weight: 500
+
+.success_info
+	position: relative
+	padding-left: 30px
+	margin-bottom: 3rem
+	&::before
+		content: ''
+		position: absolute
+		display: inline-block
+		width: 3px
+		height: 100%
+		top: 0
+		left: 0
+		background-color: #B8983D
+.success_phone
+	display: inline-block
+	font-size: 1.05em
+	font-weight: 500
+	color: #555
+	white-space: nowrap
+	margin-right: .375rem
+.success_h3
+	font-size: 1em
+@media (max-width: 768px)
+	.success_list li
+		margin-bottom: 1rem

@@ -31,29 +31,30 @@
     text-decoration: none
     border: none
     border-radius: 3px
-    transition: border-color .2s ease-out    
+    transition: color .2s ease-out    
     &:hover			
         color: #111
-
+.pagination-link-btn-empty,
 .pagination-link-btn
     display: inline-block
-    //color: #8b8b8b
-    color: #777
     text-decoration: none
     font-size: .8rem
     font-weight: 600
     line-height: 30px
     text-align: center
     box-sizing: border-box
-    border: 1px solid $border-color
     border-radius: 3px
-    background-color: $border-color
     padding: 0 1rem
     margin: 0 .25rem
-    transition: border-color .2s ease-out, color .2s ease-out
-    &:hover        	
-        border-color: $accent
+    transition: color .2s ease-out
+.pagination-link-btn
+    color: #777
+    &:hover
         color: $textcolor
+
+.pagination-link-btn-empty
+    color: rgba(#333, .5)
+
 
 .pagination-item.active
     background-color: $accent

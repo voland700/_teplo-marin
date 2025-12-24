@@ -519,6 +519,10 @@ a.product_advantages_link
     &:hover		
         color: $d-opposit
 
+.table-wrap
+    overflow-y: hidden
+
+
 .product_description
     margin-bottom: 2.5rem
     color: #444
@@ -528,6 +532,22 @@ a.product_advantages_link
         font-size: 1.8rem
     h3 
         font-size: 1.6rem
+
+
+.info_table
+    border-collapse: collapse
+    margin-top: 1.5rem
+    margin-bottom: 1.5rem
+    overflow-y: scroll
+    td
+        padding: .75rem 1rem
+        border: 1px solid $border-color 
+        text-align: center
+        &:first-child
+            text-align: left
+        p 
+            margin-bottom: 0
+
 
 .product_text_title
     margin: 1.5rem 0 1.5rem
@@ -583,6 +603,35 @@ a.product_advantages_link
         max-width: 500px
         opacity: .5
         padding-left: 2rem
+
+.admin_wrap
+    background-color: #d8d8d8
+    border: none
+    border-radius: 5px
+    box-shadow: 0 3px 5px 0 rgba(3,3,3,.35)
+    box-sizing: border-box
+    display: block
+    height: 40px
+    position: fixed
+    right: 5px
+    top: 5px
+    transition: background-color 70ms ease-out,color .1s ease-out,-webkit-box-shadow 70ms ease-out
+    transition: background-color 70ms ease-out,color .1s ease-out,box-shadow 70ms ease-out
+    transition: background-color 70ms ease-out,color .1s ease-out,box-shadow 70ms ease-out,-webkit-box-shadow 70ms ease-out
+    width: 40px
+
+.admin_link
+    color: #fff
+    display: block
+    font-size: 30px
+    font-weight: 700
+    height: 100%
+    line-height: 40px
+    text-align: center
+    text-decoration: none
+    text-shadow: 1px 1px 1px rgba(0,0,0,.05)
+    transition: color .1s ease-out
+    width: 100%
 
 @media (max-width: 1400px)
     .product_top

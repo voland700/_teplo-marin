@@ -1,0 +1,313 @@
+.order_wrap
+	width: 100%
+
+.order_step
+	width: 100%
+	border: 1px solid darken(#f9f9fa, 2%)
+	border-radius: 3px
+	margin-bottom: 5px
+.order_step_header
+	display: flex
+	align-items: center
+	height: 50px
+	padding-left: 15px
+	padding-right: 15px
+	background-color: lighten(#cacdd2, 15%)
+
+.order_step_namber
+	display: block
+	width: 30px
+	height: 30px
+	border-radius: 50%
+	background-color: #B8983D
+	font-size: 1.1rem
+	line-height: 30px
+	color: #fff
+	text-align: center
+	margin-right: 15px
+
+.order_step_h3
+	font-size: 1.2rem
+	margin-bottom: 0
+.order_step_chenche
+	display: inline-block
+	align-content: flex-end
+	font-size: .9rem
+	margin-left: auto
+	text-decoration: underline
+	text-decoration-style: dotted
+	color: #B8983D
+	cursor: pointer
+
+.order_step_body
+	display: none
+	padding: 15px 15px 25px 15px
+.order_fild_wrap
+	label
+		display: block
+		width: 100%
+.order_fild_valid
+	display: block
+
+.order_step_bottom
+	display: flex
+	justify-content: space-between
+	padding: 2rem 15px 0 15px
+.order_step_back,
+.order_step_go
+	display: inline-block
+	font-weight: 400
+	line-height: 1.5
+	color: #212529
+	text-align: center
+	text-decoration: none
+	vertical-align: middle
+	cursor: pointer
+	user-select: none
+	background-color: transparent
+	border: 1px solid transparent
+	padding: 0.3rem 0.75rem
+	font-size: 1rem
+	border-radius: 0.25rem
+	color: #fff
+	background-color: #00b74a
+	border-color: #00b74a
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+	&:hover,
+	&:focus
+		background-color: darken(#00b74a, 5%)
+
+.order_step_back
+	margin-right: auto
+.order_step_go
+	margin-left: auto
+
+.order_checkbox_wrap
+	display: flex
+	flex-wrap: wrap
+.order_checkbox_items
+	width: calc(100% - 230px)
+	display: flex
+	flex-wrap: wrap
+	padding: 15px
+
+	//border: 1px solid #f5f5f5
+.checkbox_item
+	width: 152px
+	box-sizing: border-box
+	margin-right: 15px
+	p
+		font-size: .9em
+		line-height: 1.15
+		color: #999
+		text-align: center
+.checkbox_label
+	display: block
+	position: relative
+	width: 150px
+	height: 75px
+	background-repeat: no-repeat
+	background-size: 85%
+	background-position: center center
+	border: 1px solid #cacdd2
+	border-radius: 3px
+	overflow: hidden
+	cursor: pointer
+	margin-bottom: .375rem
+.hidden-checkbox
+	appearance: none
+	position: absolute
+.fake_checkbox
+	position: relative
+	top: 7px
+	left: 7px
+	z-index: 10
+	width: 15px
+	height: 15px
+	border: 1px solid #b2b2b2
+	border-radius: 3px
+	background-color: #fff
+.checkmark
+	display: none
+	width: 100%
+	height: 100%
+	background-color: #2585e5
+	font-size: 13px
+	line-height: 15px
+	text-align: center
+	color: #fff
+
+.checkbox_label input:checked ~ .fake_checkbox .checkmark
+	display: block
+.checkbox_label input:checked ~ .fake_checkbox
+	border: 1px solid #2585e5
+	background-color: #2585e5
+
+.order_delivery_choisen
+	width: 230px
+	padding: 15px
+	border: 1px solid darken(#f5f5f5, 5%)
+	border-radius: 3px
+.delivery_choisen_name
+	font-size: .9em
+	font-weight: 700
+	margin-bottom: 5px
+	color: #555
+	text-align: center
+.delivery_choisen_img_wrap
+	width: 150px
+	border: 2px solid #c6c6c6
+	border-radius: 5px
+	overflow: hidden
+	margin: 0 auto 1rem auto
+.delivery_choisen_img
+	width: 100%
+.delivery_choisen_text
+	font-size: .85em
+	line-height: 1.25rem
+
+.order_fild
+	width: 75%
+	margin-bottom: 1rem
+	label
+		display: block
+		font-size: 1em
+	textarea,
+	input
+		width: 100%
+		border: 1px solid #c6c6c6
+		border-radius: 3px
+		padding: 3px 10px
+		font-size: 1em
+		font-style: italic
+		overflow: hidden
+		&::placeholder
+			color: #888
+.order_fild_valid
+	font-size: .9em
+	font-style: italic
+	color: red
+
+.order_fild
+	textarea.invalid,
+	input.invalid
+		border: 1px solid #e56565
+
+
+.order_list
+	list-style: none
+	//width: 75%
+	margin-top: 1.5rem
+	li
+		display: flex
+
+
+.order_i_link
+	display: block
+	width: calc( 100% - 300px )
+	text-decoration: none
+	color: darken(#B8983D, 10%)
+	margin-right: 1rem
+.order_iprice
+	display: inline-block
+	width: 150px
+	font-size: 1em
+	font-style: italic
+	color: #999
+	margin-left: auto
+	text-align: right
+
+
+.order_i_total_price
+	width: 120px
+	display: block
+	font-weight: 500
+	margin-left: 15px
+	text-align: right
+
+.order_total
+	display: block
+	font-size: 1.1em
+	font-weight: 500
+	text-align: right
+.order_finish
+	display: flex
+	align-items: center
+	margin: 2rem 0
+	padding: 0 15px
+.order_finish_info
+	width: 75%
+
+.order_finish_btn
+	width: 25%
+
+.order_btn
+	display: block
+	box-sizing: border-box
+	padding: .5rem	1rem
+	margin: 0 20px 0 auto
+	text-decoration: none
+	background-color: #00b74a
+	box-sizing: border-box
+	border: 0
+	border-radius: 3px
+	color: #fff
+	text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+	box-shadow: 0 4px 10px 0 rgba(#000, .2), 0 4px 20px 0 rgba(#000, .1)
+	transition: border-color 70ms ease-out, background-color 70ms ease-out
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #ffffff
+		background-color: darken(#00b74a, 5% )
+		box-shadow: 0 2px 5px 0 rgba(#000, .2), 0 2px 10px 0 rgba(#000, .1)
+
+
+
+
+
+
+@media (max-width: 1400px)
+	.order_fild
+		width: 100%
+	.order_list
+		width: 100%
+	.order_total
+		width: 100%
+
+
+@media (max-width: 768px)
+	.order_checkbox_items
+		width: 100%
+		justify-content: space-around
+	.order_delivery_choisen
+		width: 100%
+	.delivery_choisen_name
+		text-align: center
+	.delivery_choisen_img_wrap
+		margin: 0 auto 1rem auto
+
+	.order_list li
+		flex-wrap: wrap
+		justify-content: flex-end
+	.order_i_link
+		width: 100%
+
+	.order_finish_info
+		width: calc( 100% - 200px )
+	.order_finish_btn
+		width: 200px
+@media (max-width: 576px)
+
+	.order_finish
+		flex-wrap: wrap
+		justify-content: center
+		.modal_agreement
+			text-align: center
+	.order_finish_info
+		width: 100%
+		margin: 1rem auto
+
+
+	.order_finish_btn
+		width: 100%
