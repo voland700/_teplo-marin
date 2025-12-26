@@ -2,14 +2,13 @@
     margin-bottom: 4rem
 .product_top
     display: grid
-    grid-template-columns: 450px 1fr
+    grid-template-columns: 510px 510px auto
     grid-template-rows: 1fr
     gap: 2rem
     margin-bottom: 4rem
 
 
 .product_images_block
-    width: 100%
     user-select: none
 .product_img_main
     width: 100%
@@ -636,10 +635,31 @@ a.product_advantages_link
 
 @media (max-width: 1400px)
     .product_top
-        grid-template-columns: 400px 1fr
-        gap: 1.5rem
+        grid-template-columns: 438px 438px auto 
 
+@media (max-width: 1200px)
+    .product_top
+        grid-template-columns: 449px 449px
+        grid-template-rows: 1fr auto
+        grid-template-areas: "img info" "attraction attraction"
+    .product_images_block
+        grid-area:  img
 
+    .product_info_block
+        grid-area: info
+    .product_attraction_block
+        grid-area: attraction
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    .product_attraction_item
+        width: calc(100% / 3 - 1rem )
+
+    .product_advice_wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        .card:last-child
+            display: none
                 
         
         
