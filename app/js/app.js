@@ -184,11 +184,43 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 			}
 		});
-	});
+	});	
 
 
-		
+	/* --- TO DO add for content + Sidebar  ----*/
 
+
+	document.querySelectorAll('.sorting_btn').forEach((elem)=>{
+		elem.addEventListener('click', function(e){
+			const btn = e.currentTarget;
+
+			if(btn.classList.contains('active')) return false;
+			const wrapper = document.querySelector('.list_inner')
+			document.querySelectorAll('.sorting_btn').forEach((elem)=>{
+				//console.log(elem.classList);
+				if(elem.classList.contains('active')) elem.classList.remove('active');
+			});
+			btn.classList.add('active')
+			if(btn.dataset.sorting === 'list'){
+				wrapper.classList.add('list')
+			}else{
+				wrapper.classList.remove('list')
+			}        
+		});
+	})
+
+	if(document.getElementById('btnMobailSidebarUp')){
+		document.getElementById('btnMobailSidebarUp').addEventListener('click', (el)=>{
+			const sidebar = document.getElementById('sidebar');
+			sidebar.classList.toggle('show');
+		});
+
+		document.getElementById('btnMobailSidebarClose').addEventListener('click', (el)=>{
+			const sidebar = document.getElementById('sidebar');
+			sidebar.classList.toggle('show');
+		});
+	}	
+	/* --- END TO DO --*/
 
 	if(document.getElementById('filter')){
 		let priceRange = document.getElementById('priceRange');

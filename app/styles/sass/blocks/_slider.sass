@@ -244,8 +244,6 @@
 .sidebar_banner_link
     display: block
     overflow: hidden
-    
-
     text-decoration: none
 .sidebar_banner_span
 
@@ -256,13 +254,20 @@
 .sidebar_banner_span
 
 
-@media (max-width: 1200px) 
+@media (max-width: 1200px)
     .slide-info-title
         font-size: 1.8rem
     .slide-info-txt
         font-size: 1.1rem
     .slide-info
         padding-left: 2rem
+    .sidebar_banners
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+    .sidebar_banner
+        width: 420px
+         
 
 @media (max-width: 992px)
     .slider_top
@@ -305,7 +310,12 @@
     .left_menu_btn_block
         display: none
     .sidebar_banners
-        display: none
+        justify-content: space-between
+        padding-left: 1.5rem
+        padding-right: 1.5rem
+    .sidebar_banner
+        width: calc( 50% - .75rem )
+
 
 @media (max-width: 768px)
     .slide-content
@@ -342,3 +352,6 @@
 @media (max-width: 450px)
     .slide-info-title
         font-size: 1.5rem
+    .sidebar_banner
+        width: 100%
+        margin-bottom: 2rem

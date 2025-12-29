@@ -71,6 +71,13 @@
     &:focus
         box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, .05)
 
+.modal_sidebar_up_block
+    display: none
+    justify-content: flex-end
+    align-items: center
+    height: 32px
+    margin-bottom: 1.5rem
+
 .btn_mobail_filter_up
     display: none
     justify-content: center
@@ -86,8 +93,8 @@
         background-color: $accent
         color: #333
    
-@media (max-width: 992px)
-    .sorting_btn_block
-        display: none
+@media (max-width: 1200px)
     .btn_mobail_filter_up
+        display: flex
+    .modal_sidebar_up_block
         display: flex

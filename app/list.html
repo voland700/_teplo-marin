@@ -18,6 +18,11 @@
             <!--#include virtual="/parts/sidebar.html" -->
         </aside>
         <main class="content">
+            <div class="modal_sidebar_up_block">
+                 <button class="btn_mobail_filter_up" id="btnMobailSidebarUp">
+                    <span class="icon-bars-sort-regular"></span>
+                </button>
+            </div>
 
             <ul class="list_category_ul">
 
@@ -109,11 +114,7 @@
                         <option value="descending_price">По названию (А - Я)</option>
                         <option value="descending_age">По названию (Я - А)</option>                       
                     </select>
-                </div>
-
-                <button class="btn_mobail_filter_up" id="btnMobailFilterUp">
-                    <span class="icon-bars-sort-regular"></span>
-                </button>
+                </div>              
 
             </div>
 
@@ -184,34 +185,7 @@
 </div>
 
 <script>
-document.querySelectorAll('.sorting_btn').forEach((elem)=>{
-    elem.addEventListener('click', function(e){
-        const btn = e.currentTarget;
 
-        if(btn.classList.contains('active')) return false;
-        const wrapper = document.querySelector('.list_inner')
-        document.querySelectorAll('.sorting_btn').forEach((elem)=>{
-            //console.log(elem.classList);
-            if(elem.classList.contains('active')) elem.classList.remove('active');
-        });
-        btn.classList.add('active')
-        if(btn.dataset.sorting === 'list'){
-            wrapper.classList.add('list')
-        }else{
-            wrapper.classList.remove('list')
-        }        
-    });
-})
-
-document.getElementById('btnMobailFilterUp').addEventListener('click', (el)=>{
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('show');
-});
-
-document.getElementById('btnMobailFilterClose').addEventListener('click', (el)=>{
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('show');
-});
 
 
 
